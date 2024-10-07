@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 70415f52a41778443937855bccfb8c70
+guid: 3349493692ca2ae4fa7b0f3fb4dc10fe
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 62
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,232 +110,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy_Idle1
+      name: GrassCollection_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 33
-        width: 61
-        height: 61
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1862ba7d890f2f4e81f186a82eda08c
-      internalID: 1330180732
+      spriteID: e5540c19ddf43f5449569b5258c8a7a9
+      internalID: -660192310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_Run1
+      name: GrassCollection_1
       rect:
         serializedVersion: 2
-        x: 160
-        y: 33
-        width: 61
-        height: 61
+        x: 33
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a29a1c373bec8c43a267a8ec836d015
-      internalID: 142970332
+      spriteID: 4b73187df6017a64d9e463468f8020fb
+      internalID: -626524846
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_Idle2
+      name: GrassCollection_2
       rect:
         serializedVersion: 2
-        x: 286
-        y: 33
-        width: 61
-        height: 61
+        x: 66
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0324417d6ceb894b87b866f7c4bdc5b
-      internalID: -667504514
+      spriteID: 8a2e6f8b2fc7bd949a0fd0bc589d22df
+      internalID: -2067025190
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_4
+      name: GrassCollection_3
       rect:
         serializedVersion: 2
-        x: 410
-        y: 30
-        width: 77
-        height: 66
+        x: 99
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce3ee82e1b40b064da7703d9ace72152
-      internalID: -1760739010
+      spriteID: 59e88277e26e89c4592881c6188e3192
+      internalID: -1647240081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_6
+      name: GrassCollection_4
       rect:
         serializedVersion: 2
-        x: 528
-        y: 29
-        width: 86
-        height: 78
+        x: 132
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 769af9fa66533b341806a069d532c3e5
-      internalID: -221389179
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_7
-      rect:
-        serializedVersion: 2
-        x: 668
-        y: 30
-        width: 75
-        height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad405d3bc3b03ba498f2d41fcc523863
-      internalID: 638322975
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_8
-      rect:
-        serializedVersion: 2
-        x: 795
-        y: 31
-        width: 79
-        height: 73
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df6276ec7b697c540913074a0b10352f
-      internalID: 1706765950
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_Run2
-      rect:
-        serializedVersion: 2
-        x: 929
-        y: 33
-        width: 61
-        height: 61
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 073c5a50a1bfd284cac24988f8a2504e
-      internalID: 713214265
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_Run3
-      rect:
-        serializedVersion: 2
-        x: 1056
-        y: 33
-        width: 61
-        height: 61
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 205b522a50bf29141a0eec0892b153e4
-      internalID: 2076823587
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_Run4
-      rect:
-        serializedVersion: 2
-        x: 1184
-        y: 33
-        width: 61
-        height: 61
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6cb6e0c6d4829704cb68139d434e2ed6
-      internalID: 1941197867
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_Run5
-      rect:
-        serializedVersion: 2
-        x: 1312
-        y: 33
-        width: 61
-        height: 61
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: adf6778397e86a948824d6219962c5a9
-      internalID: -1410585822
+      spriteID: 6442d29136cb3594483b1325bdf260bf
+      internalID: 1224725490
       vertices: []
       indices: 
       edges: []
@@ -351,19 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      enemy_10: -1020087548
-      enemy_4: -1760739010
-      enemy_5: 1197073596
-      enemy_6: -221389179
-      enemy_7: 638322975
-      enemy_8: 1706765950
-      enemy_Idle1: 1330180732
-      enemy_Idle2: -667504514
-      enemy_Run1: 142970332
-      enemy_Run2: 713214265
-      enemy_Run3: 2076823587
-      enemy_Run4: 1941197867
-      enemy_Run5: -1410585822
+      GrassCollection_0: -660192310
+      GrassCollection_1: -626524846
+      GrassCollection_2: -2067025190
+      GrassCollection_3: -1647240081
+      GrassCollection_4: 1224725490
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

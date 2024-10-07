@@ -1,16 +1,16 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+
 public class Player : MonoBehaviour
 {
     public float speed;
-    
-    Vector2 _inputVec;
+    public Vector2 inputVec;
+
     Rigidbody2D _rigidbody;
     SpriteRenderer _spriteRenderer;
     Animator _animator;
     
-    void Start()
+    void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -18,20 +18,20 @@ public class Player : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Vector2 nextVec = _inputVec * speed * Time.fixedDeltaTime;
+        Vector2 nextVec = inputVec * speed * Time.fixedDeltaTime;
         _rigidbody.MovePosition(_rigidbody.position + nextVec);
     }
 
     private void LateUpdate()
     {
-        _animator.SetFloat("Speed", _inputVec.magnitude);
+        _animator.SetFloat("Speed", inputVec.magnitude);
         
-        if (_inputVec.x != 0)
-            _spriteRenderer.flipX = _inputVec.x > 0;
+        if (inputVec.x != 0)
+            _spriteRenderer.flipX = inputVec.x > 0;
     }
 
     public void OnMove(InputValue value)
     {
-        _inputVec = value.Get<Vector2>();
+        inputVec = value.Get<Vector2>();
     }
 }
