@@ -9,6 +9,12 @@ public class Enemy : MonoBehaviour
     
     Rigidbody2D _rigidbody;
     SpriteRenderer _spriteRenderer;
+
+    private void OnEnable()
+    {
+        target = GameManager.Instance.player.GetComponent<Rigidbody2D>();
+    }
+
     void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
