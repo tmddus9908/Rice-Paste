@@ -269,7 +269,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f69a77e7e74078e41875cc03aec764a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 0
+  health: 0
+  maxHealth: 0
+  animatorControllers:
+  - {fileID: 9100000, guid: 756202a7cd14611468e0c719d4bb2f68, type: 2}
+  - {fileID: 9100000, guid: d4477c1c0fd15574d8838e89777f6caa, type: 2}
   target: {fileID: 0}
   isLive: 1
 --- !u!114 &8026061535723081714

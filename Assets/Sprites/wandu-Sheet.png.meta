@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 70415f52a41778443937855bccfb8c70
+guid: 9f4fda29870659740b151c70f8aa9031
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 62
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,232 +110,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy_Idle1
+      name: wandu-Sheet_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 33
-        width: 61
-        height: 61
+        x: 31
+        y: 25
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1862ba7d890f2f4e81f186a82eda08c
-      internalID: 1330180732
+      spriteID: 4003c8676359fbc47ac092bcfb264c57
+      internalID: -1901981274
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_Run1
+      name: wandu-Sheet_1
       rect:
         serializedVersion: 2
-        x: 160
-        y: 33
-        width: 61
-        height: 61
+        x: 159
+        y: 24
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a29a1c373bec8c43a267a8ec836d015
-      internalID: 142970332
+      spriteID: 1feb74995f39f6c48b784fd469036351
+      internalID: -1011378106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_Idle2
+      name: wandu-Sheet_2
       rect:
         serializedVersion: 2
-        x: 286
-        y: 33
-        width: 61
-        height: 61
+        x: 287
+        y: 25
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0324417d6ceb894b87b866f7c4bdc5b
-      internalID: -667504514
+      spriteID: dc30e13317147944991d889a863454ae
+      internalID: -612077755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_4
+      name: wandu-Sheet_3
       rect:
         serializedVersion: 2
-        x: 410
-        y: 30
-        width: 77
-        height: 66
+        x: 415
+        y: 25
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce3ee82e1b40b064da7703d9ace72152
-      internalID: -1760739010
+      spriteID: 6778a71b6a3b24e46aba5abf3aa9540e
+      internalID: 1168488421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_6
+      name: wandu-Sheet_4
       rect:
         serializedVersion: 2
-        x: 528
-        y: 29
-        width: 86
-        height: 78
+        x: 543
+        y: 25
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 769af9fa66533b341806a069d532c3e5
-      internalID: -221389179
+      spriteID: 35c823b559f3899498b7b76293df26c5
+      internalID: -328977874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_7
+      name: wandu-Sheet_5
       rect:
         serializedVersion: 2
-        x: 668
-        y: 30
-        width: 75
-        height: 66
+        x: 671
+        y: 25
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad405d3bc3b03ba498f2d41fcc523863
-      internalID: 638322975
+      spriteID: fea010b0493fec743b01e91a0f1292a6
+      internalID: -1158282904
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_8
+      name: wandu-Sheet_6
       rect:
         serializedVersion: 2
-        x: 795
-        y: 31
-        width: 79
-        height: 73
+        x: 799
+        y: 25
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df6276ec7b697c540913074a0b10352f
-      internalID: 1706765950
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_Run2
-      rect:
-        serializedVersion: 2
-        x: 929
-        y: 33
-        width: 61
-        height: 61
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 073c5a50a1bfd284cac24988f8a2504e
-      internalID: 713214265
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_Run3
-      rect:
-        serializedVersion: 2
-        x: 1056
-        y: 33
-        width: 61
-        height: 61
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 205b522a50bf29141a0eec0892b153e4
-      internalID: 2076823587
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_Run4
-      rect:
-        serializedVersion: 2
-        x: 1184
-        y: 33
-        width: 61
-        height: 61
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6cb6e0c6d4829704cb68139d434e2ed6
-      internalID: 1941197867
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_Run5
-      rect:
-        serializedVersion: 2
-        x: 1312
-        y: 33
-        width: 61
-        height: 61
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: adf6778397e86a948824d6219962c5a9
-      internalID: -1410585822
+      spriteID: 92d409ec4e8779d4b96346557558e2f8
+      internalID: 980906809
       vertices: []
       indices: 
       edges: []
@@ -351,19 +267,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      enemy_10: -1020087548
-      enemy_4: -1760739010
-      enemy_5: 1197073596
-      enemy_6: -221389179
-      enemy_7: 638322975
-      enemy_8: 1706765950
-      enemy_Idle1: 1330180732
-      enemy_Idle2: -667504514
-      enemy_Run1: 142970332
-      enemy_Run2: 713214265
-      enemy_Run3: 2076823587
-      enemy_Run4: 1941197867
-      enemy_Run5: -1410585822
+      wandu-Sheet_0: -1901981274
+      wandu-Sheet_1: -1011378106
+      wandu-Sheet_2: -612077755
+      wandu-Sheet_3: 1168488421
+      wandu-Sheet_4: -328977874
+      wandu-Sheet_5: -1158282904
+      wandu-Sheet_6: 980906809
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

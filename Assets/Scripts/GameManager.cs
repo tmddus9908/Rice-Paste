@@ -4,6 +4,9 @@ using UnityEngine.Serialization;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+
+    public float gameTime;
+    public float maxGameTime = 2 * 10f;
     
     public Player player;
     public PoolManager poolManager;
@@ -11,5 +14,15 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+    }
+
+    void Update()
+    {
+        gameTime += Time.deltaTime;
+
+        if (gameTime > maxGameTime)
+        {
+            gameTime = maxGameTime;
+        }
     }
 }
