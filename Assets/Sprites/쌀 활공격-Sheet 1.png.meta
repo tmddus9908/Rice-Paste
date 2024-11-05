@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f3658934eba12744eaa53a113fafdca2
+guid: 2fdc0c063226cc845b4045fe9f475b07
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\uD65C\uACF5\uACA9-Sheet_0"
+      name: "\uC300 \uD65C\uACF5\uACA9-Sheet 1_0"
       rect:
         serializedVersion: 2
         x: 2
@@ -118,83 +118,20 @@ TextureImporter:
         width: 123
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04de732489adc8f49ad864ee45838666
-      internalID: 2146546377
+      spriteID: b4e65c8e863dbad47876f5e93ec92e95
+      internalID: 2072274991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uD65C\uACF5\uACA9-Sheet_1"
-      rect:
-        serializedVersion: 2
-        x: 130
-        y: 0
-        width: 123
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7029fb75a59cdf545b512049adeed519
-      internalID: -1069322366
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\uD65C\uACF5\uACA9-Sheet_2"
-      rect:
-        serializedVersion: 2
-        x: 258
-        y: 0
-        width: 123
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 719657b819db9614192929d38212ed60
-      internalID: 1923604655
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\uD65C\uACF5\uACA9-Sheet_3"
-      rect:
-        serializedVersion: 2
-        x: 386
-        y: 0
-        width: 123
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9ab92d3fee801cb49aa1044a12a51a0f
-      internalID: 1200830143
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\uD65C\uACF5\uACA9-Sheet_4"
+      name: "\uC300 \uD65C\uACF5\uACA9-Sheet 1_1"
       rect:
         serializedVersion: 2
         x: 514
@@ -202,20 +139,83 @@ TextureImporter:
         width: 123
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a667d370a0d24da4a8cdd4221b59e871
-      internalID: -1166077589
+      spriteID: 73738e32565fd7145ba5805d7682e455
+      internalID: 1487770208
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uD65C\uACF5\uACA9-Sheet_5"
+      name: "\uC300 \uD65C\uACF5\uACA9-Sheet 1_2"
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 0
+        width: 123
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b699df813bdd54aa91e513de3c8dd8
+      internalID: 1020286109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uC300 \uD65C\uACF5\uACA9-Sheet 1_3"
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 0
+        width: 123
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b91e076185221af43a123f1b9852dc5b
+      internalID: 2004763537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uC300 \uD65C\uACF5\uACA9-Sheet 1_4"
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 123
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5081f149198bc8d4e8b89dc008cbd432
+      internalID: -1752818298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uC300 \uD65C\uACF5\uACA9-Sheet 1_5"
       rect:
         serializedVersion: 2
         x: 642
@@ -223,14 +223,14 @@ TextureImporter:
         width: 123
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 216c63d18be15954bb7a892635b54f3a
-      internalID: 1083355790
+      spriteID: b503c9692248c2941985b6e39d7e7d2e
+      internalID: 268029105
       vertices: []
       indices: 
       edges: []
@@ -246,12 +246,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "\uD65C\uACF5\uACA9-Sheet_0": 2146546377
-      "\uD65C\uACF5\uACA9-Sheet_1": -1069322366
-      "\uD65C\uACF5\uACA9-Sheet_2": 1923604655
-      "\uD65C\uACF5\uACA9-Sheet_3": 1200830143
-      "\uD65C\uACF5\uACA9-Sheet_4": -1166077589
-      "\uD65C\uACF5\uACA9-Sheet_5": 1083355790
+      "\uC300 \uD65C\uACF5\uACA9-Sheet 1_0": 2072274991
+      "\uC300 \uD65C\uACF5\uACA9-Sheet 1_1": 1487770208
+      "\uC300 \uD65C\uACF5\uACA9-Sheet 1_2": 1020286109
+      "\uC300 \uD65C\uACF5\uACA9-Sheet 1_3": 2004763537
+      "\uC300 \uD65C\uACF5\uACA9-Sheet 1_4": -1752818298
+      "\uC300 \uD65C\uACF5\uACA9-Sheet 1_5": 268029105
+      "\uC300 \uD65C\uACF5\uACA9-Sheet 1_6": 1855872750
+      "\uC300 \uD65C\uACF5\uACA9-Sheet 1_7": 396637300
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

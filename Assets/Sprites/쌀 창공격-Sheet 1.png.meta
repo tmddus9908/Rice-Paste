@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f3658934eba12744eaa53a113fafdca2
+guid: 71427197c7df93348b1f15693de7a455
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,127 +110,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\uD65C\uACF5\uACA9-Sheet_0"
+      name: "\uC300 \uCC3D\uACF5\uACA9-Sheet 1_0"
       rect:
         serializedVersion: 2
-        x: 2
+        x: 3
         y: 0
-        width: 123
+        width: 120
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04de732489adc8f49ad864ee45838666
-      internalID: 2146546377
+      spriteID: d234fdde20b65aa4dac3b309f3fe5846
+      internalID: 790397893
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uD65C\uACF5\uACA9-Sheet_1"
+      name: "\uC300 \uCC3D\uACF5\uACA9-Sheet 1_1"
       rect:
         serializedVersion: 2
-        x: 130
+        x: 131
         y: 0
-        width: 123
+        width: 120
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7029fb75a59cdf545b512049adeed519
-      internalID: -1069322366
+      spriteID: 8ad0f5991be535c4d9027590251f5469
+      internalID: 1648931530
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uD65C\uACF5\uACA9-Sheet_2"
+      name: "\uC300 \uCC3D\uACF5\uACA9-Sheet 1_2"
       rect:
         serializedVersion: 2
-        x: 258
+        x: 259
         y: 0
-        width: 123
+        width: 120
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 719657b819db9614192929d38212ed60
-      internalID: 1923604655
+      spriteID: 51f1a39efc47e5f478ad1d1f0e737e7e
+      internalID: 608261421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uD65C\uACF5\uACA9-Sheet_3"
+      name: "\uC300 \uCC3D\uACF5\uACA9-Sheet 1_3"
       rect:
         serializedVersion: 2
-        x: 386
+        x: 387
         y: 0
-        width: 123
+        width: 120
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ab92d3fee801cb49aa1044a12a51a0f
-      internalID: 1200830143
+      spriteID: f8647147ddd6df547bfee793618f7530
+      internalID: 2004859627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uD65C\uACF5\uACA9-Sheet_4"
+      name: "\uC300 \uCC3D\uACF5\uACA9-Sheet 1_4"
       rect:
         serializedVersion: 2
-        x: 514
+        x: 515
         y: 0
-        width: 123
+        width: 120
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a667d370a0d24da4a8cdd4221b59e871
-      internalID: -1166077589
+      spriteID: 634555b7a174c1744800ca797719d66d
+      internalID: -1420629529
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uD65C\uACF5\uACA9-Sheet_5"
+      name: "\uC300 \uCC3D\uACF5\uACA9-Sheet 1_5"
       rect:
         serializedVersion: 2
-        x: 642
+        x: 643
         y: 0
-        width: 123
+        width: 120
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 216c63d18be15954bb7a892635b54f3a
-      internalID: 1083355790
+      spriteID: 4ae41b33ce4d5724d83a84051a0f5e25
+      internalID: -1368842000
       vertices: []
       indices: 
       edges: []
@@ -246,12 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "\uD65C\uACF5\uACA9-Sheet_0": 2146546377
-      "\uD65C\uACF5\uACA9-Sheet_1": -1069322366
-      "\uD65C\uACF5\uACA9-Sheet_2": 1923604655
-      "\uD65C\uACF5\uACA9-Sheet_3": 1200830143
-      "\uD65C\uACF5\uACA9-Sheet_4": -1166077589
-      "\uD65C\uACF5\uACA9-Sheet_5": 1083355790
+      "\uC300 \uCC3D\uACF5\uACA9-Sheet 1_0": 790397893
+      "\uC300 \uCC3D\uACF5\uACA9-Sheet 1_1": 1648931530
+      "\uC300 \uCC3D\uACF5\uACA9-Sheet 1_2": 608261421
+      "\uC300 \uCC3D\uACF5\uACA9-Sheet 1_3": 2004859627
+      "\uC300 \uCC3D\uACF5\uACA9-Sheet 1_4": -1420629529
+      "\uC300 \uCC3D\uACF5\uACA9-Sheet 1_5": -1368842000
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

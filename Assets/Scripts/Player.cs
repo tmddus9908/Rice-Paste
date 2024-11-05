@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -28,6 +29,18 @@ public class Player : MonoBehaviour
         
         if (inputVec.x != 0)
             _spriteRenderer.flipX = inputVec.x > 0;
+    }
+
+    private void Update()
+    {
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            Vector2 mousePosition = Mouse.current.position.ReadValue();
+            Vector3 pos = Camera.main.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, 
+                Camera.main.transform.position.z));
+            Debug.Log(pos);
+
+        }
     }
 
     public void OnMove(InputValue value)
