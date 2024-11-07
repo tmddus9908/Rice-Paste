@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,6 +6,8 @@ public class Player : MonoBehaviour
     public float speed;
     public Vector2 inputVec;
 
+    public bool isAttack;
+    public Weapon weapon;
     Rigidbody2D _rigidbody;
     SpriteRenderer _spriteRenderer;
     Animator _animator;
@@ -33,12 +34,20 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        if (Mouse.current.leftButton.isPressed)
         {
             Vector2 mousePosition = Mouse.current.position.ReadValue();
-            Vector3 pos = Camera.main.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, 
-                Camera.main.transform.position.z));
-            Debug.Log(pos);
+            Vector2 pos = Camera.main.ScreenToWorldPoint(new Vector2(mousePosition.x, mousePosition.y));
+            weapon.transform.position = pos;
+            float angle = Mathf.Atan2(pos.y - transform.position.y, pos.x - transform.position.x) * Mathf.Rad2Deg;
+            weapon.transform.rotation = Quaternion.AngleAxis(angle - 180, Vector3.forward);
+            // _weapon.gameObject.SetActive(true);
+            if (pos.x > 0)
+                weapon.GetComponent<SpriteRenderer>().flipY = true;
+            else
+                weapon.GetComponent<SpriteRenderer>().flipY = false;
+            
+            isAttack = true;
 
         }
     }

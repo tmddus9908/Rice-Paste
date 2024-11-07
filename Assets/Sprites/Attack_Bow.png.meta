@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 69de40c30802d034ea3d157b91d0e8df
+guid: f3658934eba12744eaa53a113fafdca2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -50,7 +50,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 72
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -110,127 +110,217 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\uCC3D\uACF5\uACA9-Sheet_0"
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 0
-        width: 120
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 688bbdcbb2ab19347b9c9704e94f552f
-      internalID: -1090286336
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\uCC3D\uACF5\uACA9-Sheet_1"
-      rect:
-        serializedVersion: 2
-        x: 259
-        y: 0
-        width: 120
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 09ae02c446a6fc3459c9c150fab79e41
-      internalID: 1201940818
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\uCC3D\uACF5\uACA9-Sheet_2"
+      name: "\uD65C\uACF5\uACA9-Sheet_0"
       rect:
         serializedVersion: 2
         x: 2
         y: 0
-        width: 120
+        width: 123
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12.5, y: -9}
+        - {x: -8.5, y: -12}
+        - {x: -3.5, y: -15}
+        - {x: 51.5, y: -15}
+        - {x: 55.5, y: -14}
+        - {x: 55.5, y: -4}
+        - {x: 42.5, y: -3}
+        - {x: -12.5, y: -3}
       tessellationDetail: 0
       bones: []
-      spriteID: 362d72a35f061a34cbe5ac0440c638ca
-      internalID: 1605478394
+      spriteID: 04de732489adc8f49ad864ee45838666
+      internalID: 2146546377
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uCC3D\uACF5\uACA9-Sheet_3"
+      name: "\uD65C\uACF5\uACA9-Sheet_1"
       rect:
         serializedVersion: 2
-        x: 387
+        x: 130
         y: 0
-        width: 120
+        width: 123
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -33.5, y: 35}
+        - {x: -39.5, y: 25}
+        - {x: -39.5, y: -20}
+        - {x: -36.5, y: -27}
+        - {x: -32.5, y: -33}
+        - {x: -29.5, y: -32}
+        - {x: -27.5, y: 1}
+        - {x: -27.5, y: 34}
+        - {x: -29.5, y: 35}
       tessellationDetail: 0
       bones: []
-      spriteID: 87f7c5382bfde1b41ac050a152b9057a
-      internalID: -14473598
+      spriteID: 7029fb75a59cdf545b512049adeed519
+      internalID: -1069322366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uCC3D\uACF5\uACA9-Sheet_4"
+      name: "\uD65C\uACF5\uACA9-Sheet_2"
       rect:
         serializedVersion: 2
-        x: 515
+        x: 258
         y: 0
-        width: 120
+        width: 123
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -34.5, y: 35}
+        - {x: -49.5, y: 25}
+        - {x: -61.5, y: 9}
+        - {x: -61.5, y: -13}
+        - {x: -34.5, y: -33}
+        - {x: -26.5, y: -33}
+        - {x: -13.5, y: -3}
+        - {x: -13.5, y: 9}
+        - {x: -27.5, y: 35}
+      - - {x: -29.5, y: -17}
+        - {x: -32.5, y: -3}
+        - {x: -23.5, y: -3}
+        - {x: -24.5, y: -5}
+        - {x: -27.5, y: -10}
+        - {x: -29.5, y: -17}
+        - {x: -30.5, y: -20}
+        - {x: -29.5, y: -20}
+      - - {x: -31.5, y: 15}
+        - {x: -30.5, y: 16}
+        - {x: -30.5, y: 24}
+        - {x: -29.5, y: 25}
+        - {x: -30.5, y: 26}
+        - {x: -30.5, y: 22}
+        - {x: -28.5, y: 19}
+        - {x: -28.5, y: 17}
+        - {x: -24.5, y: 9}
+        - {x: -23.5, y: 5}
+        - {x: -31.5, y: 5}
       tessellationDetail: 0
       bones: []
-      spriteID: 08c2744459268f64596d22c3267dd047
-      internalID: -1922878634
+      spriteID: 719657b819db9614192929d38212ed60
+      internalID: 1923604655
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uCC3D\uACF5\uACA9-Sheet_5"
+      name: "\uD65C\uACF5\uACA9-Sheet_3"
       rect:
         serializedVersion: 2
-        x: 643
+        x: 386
         y: 0
-        width: 120
+        width: 123
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -59.5, y: -9}
+        - {x: -43.5, y: -31}
+        - {x: -22.5, y: -31}
+        - {x: -7.5, y: -10}
+        - {x: -7.5, y: 7}
+        - {x: -24.5, y: 34}
+        - {x: -38.5, y: 34}
+        - {x: -59.5, y: 16}
+      - - {x: -31.5, y: -13}
+        - {x: -32.5, y: -3}
+        - {x: -18.5, y: -3}
+        - {x: -20.5, y: -6}
+        - {x: -24.5, y: -10}
+        - {x: -23.5, y: -12}
+        - {x: -29.5, y: -20}
+        - {x: -28.5, y: -21}
+        - {x: -27.5, y: -20}
+      - - {x: -29.5, y: 18}
+        - {x: -29.5, y: 21}
+        - {x: -26.5, y: 25}
+        - {x: -27.5, y: 25}
+        - {x: -27.5, y: 22}
+        - {x: -26.5, y: 19}
+        - {x: -24.5, y: 14}
+        - {x: -21.5, y: 10}
+        - {x: -17.5, y: 5}
+        - {x: -31.5, y: 5}
       tessellationDetail: 0
       bones: []
-      spriteID: 8b53e61374d9c3148bb12af6e6a7e5a8
-      internalID: 1928146753
+      spriteID: 9ab92d3fee801cb49aa1044a12a51a0f
+      internalID: 1200830143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uD65C\uACF5\uACA9-Sheet_4"
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 0
+        width: 123
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -28.5, y: 35}
+        - {x: -34.5, y: 35}
+        - {x: -39.5, y: 28}
+        - {x: -39.5, y: -29}
+        - {x: -34.5, y: -33}
+        - {x: -26.5, y: -33}
+        - {x: -23.5, y: -15}
+        - {x: -23.5, y: 23}
+        - {x: -26.5, y: 34}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a667d370a0d24da4a8cdd4221b59e871
+      internalID: -1166077589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uD65C\uACF5\uACA9-Sheet_5"
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 0
+        width: 123
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -33.5, y: 35}
+        - {x: -39.5, y: 25}
+        - {x: -39.5, y: -18}
+        - {x: -36.5, y: -27}
+        - {x: -32.5, y: -33}
+        - {x: -30.5, y: -33}
+        - {x: -28.5, y: -31}
+        - {x: -27.5, y: 33}
+        - {x: -29.5, y: 35}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 216c63d18be15954bb7a892635b54f3a
+      internalID: 1083355790
       vertices: []
       indices: 
       edges: []
@@ -246,12 +336,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "\uCC3D\uACF5\uACA9-Sheet_0": -1090286336
-      "\uCC3D\uACF5\uACA9-Sheet_1": 1201940818
-      "\uCC3D\uACF5\uACA9-Sheet_2": 1605478394
-      "\uCC3D\uACF5\uACA9-Sheet_3": -14473598
-      "\uCC3D\uACF5\uACA9-Sheet_4": -1922878634
-      "\uCC3D\uACF5\uACA9-Sheet_5": 1928146753
+      "\uD65C\uACF5\uACA9-Sheet_0": 2146546377
+      "\uD65C\uACF5\uACA9-Sheet_1": -1069322366
+      "\uD65C\uACF5\uACA9-Sheet_2": 1923604655
+      "\uD65C\uACF5\uACA9-Sheet_3": 1200830143
+      "\uD65C\uACF5\uACA9-Sheet_4": -1166077589
+      "\uD65C\uACF5\uACA9-Sheet_5": 1083355790
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
