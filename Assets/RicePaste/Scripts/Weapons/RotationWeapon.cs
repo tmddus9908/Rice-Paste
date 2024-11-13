@@ -32,7 +32,7 @@ namespace RicePaste.Scripts.Weapons
             }
         }
 
-        public void LevelUp(float damage, int count)
+        private void LevelUp(float damage, int count)
         {
             this.damage = damage;
             this.count += count;

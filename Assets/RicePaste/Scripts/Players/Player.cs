@@ -1,3 +1,4 @@
+using System;
 using RicePaste.Scripts.Weapons;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -7,14 +8,27 @@ namespace RicePaste.Scripts.Players
 {
     public class Player : MonoBehaviour
     {
-        public float speed;
-        public Vector2 inputVec;
-
+        public float attackCooldown;
+        private float _lastAttackTime = -Mathf.Infinity;
+        
+        
+        
+        public float moveSpeed;
+        
         public bool isAttack;
         public Weapon weapon;
-        Rigidbody2D _rigidbody;
-        SpriteRenderer _spriteRenderer;
-        Animator _animator;
+        
+        [NonSerialized]
+        public Vector2 InputVec;
+        [NonSerialized]
+        public Vector2 CameraMouse;
+        [NonSerialized]
+        public float Angle;
+        
+        
+        private Rigidbody2D _rigidbody;
+        private SpriteRenderer _spriteRenderer;
+        private Animator _animator;
     
         void Awake()
         {
@@ -24,42 +38,48 @@ namespace RicePaste.Scripts.Players
         }
         private void FixedUpdate()
         {
-            Vector2 nextVec = inputVec * speed * Time.fixedDeltaTime;
+            Vector2 nextVec = InputVec * moveSpeed * Time.fixedDeltaTime;
             _rigidbody.MovePosition(_rigidbody.position + nextVec);
         }
 
         private void LateUpdate()
         {
-            _animator.SetFloat("Speed", inputVec.magnitude);
+            _animator.SetFloat("Speed", InputVec.magnitude);
         
-            if (inputVec.x != 0)
-                _spriteRenderer.flipX = inputVec.x > 0;
+            if (InputVec.x != 0)
+                _spriteRenderer.flipX = InputVec.x > 0;
         }
 
         private void Update()
         {
-            if (Mouse.current.leftButton.isPressed)
+            if (Mouse.current.leftButton.isPressed && Time.time >= _lastAttackTime + attackCooldown)
             {
-                Vector2 mousePosition = Mouse.current.position.ReadValue();
-                Vector2 pos = Camera.main.ScreenToWorldPoint(new Vector2(mousePosition.x, mousePosition.y));
-                weapon.transform.position = pos;
-                float angle = Mathf.Atan2(pos.y - transform.position.y, pos.x - transform.position.x) * Mathf.Rad2Deg;
-                weapon.transform.rotation = Quaternion.AngleAxis(angle - 180, Vector3.forward);
-                // _weapon.gameObject.SetActive(true);
-                if (pos.x > 0)
-                    weapon.GetComponent<SpriteRenderer>().flipY = true;
-                else
-                    weapon.GetComponent<SpriteRenderer>().flipY = false;
-            
-                isAttack = true;
-
+                Attack();
+                _lastAttackTime = Time.time;
             }
+            else if (!Mouse.current.leftButton.isPressed)
+                weapon.gameObject.SetActive(false);
         }
 
         public void OnMove(InputValue value)
         {
-            inputVec = value.Get<Vector2>();
+            InputVec = value.Get<Vector2>();
+        }
+
+        private void Attack()
+        {
+            Vector2 mousePosition = Mouse.current.position.ReadValue();
+            CameraMouse= Camera.main.ScreenToWorldPoint(new Vector2(mousePosition.x, mousePosition.y));
+            weapon.transform.position = CameraMouse;
+            
+            weapon.gameObject.SetActive(true);
+            
+            Angle = Mathf.Atan2(CameraMouse.y - transform.position.y, CameraMouse.x - transform.position.x) * Mathf.Rad2Deg;
+            weapon.transform.rotation = Quaternion.AngleAxis(Angle - 180, Vector3.forward);
+
+            weapon.GetComponent<SpriteRenderer>().flipY = CameraMouse.x > 0 ? true : false;
+
+            weapon.Attack();
         }
     }
-
 }

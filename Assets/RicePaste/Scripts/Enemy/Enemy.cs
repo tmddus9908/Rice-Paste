@@ -63,11 +63,21 @@ namespace RicePaste.Scripts.Enemy
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (!other.CompareTag("Shield"))
-                return;
-
-            health -= other.GetComponent<Shield>().damage;
-
+            switch (other.tag)
+            {
+                case "Shield":
+                    health -= other.GetComponent<Shield>().damage;
+                    break;
+                case "Weapon":
+                    health -= other.GetComponent<Weapon>()._damage;
+                    break;
+                case "Arrow":
+                    health -= other.GetComponent<Arrow>().damage;
+                    break;
+                
+                default:
+                    return;
+            }
             if (health > 0)
             {
                 // hit action

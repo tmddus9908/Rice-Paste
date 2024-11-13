@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 455035e0c80b66e4c9cb382d01d2f4ff
+guid: da86eeddb19c8694fa8a977737e31c32
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -50,7 +50,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 72
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -110,171 +110,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\uAC80\uACF5\uACA9-Sheet_0"
+      name: Attack_Bow 2_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 111
+        width: 123
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 11.5, y: 3}
-        - {x: 10.5, y: 1}
-        - {x: 10.5, y: -9}
-        - {x: 13.5, y: -15}
-        - {x: 43.5, y: -37}
-        - {x: 50.5, y: -37}
-        - {x: 50.5, y: -30}
-        - {x: 29.5, y: 0}
-        - {x: 21.5, y: 3}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f7660b299b829a45b85d3c55c947c4d
-      internalID: -1928519139
+      spriteID: e90463de94b74db4292d0eb08404ded8
+      internalID: 2034963477
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uAC80\uACF5\uACA9-Sheet_1"
+      name: Attack_Bow 2_1
       rect:
         serializedVersion: 2
-        x: 129
+        x: 130
         y: 0
-        width: 113
+        width: 123
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 10.5, y: 64}
-        - {x: -0.5, y: 64}
-        - {x: -30.5, y: 39}
-        - {x: -31.5, y: 29}
-        - {x: -31.5, y: 27}
-        - {x: -27.5, y: 23}
-        - {x: -20.5, y: 23}
-        - {x: -13.5, y: 26}
-        - {x: -14.5, y: 30}
-        - {x: 10.5, y: 58}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 801b71fc6bbf7684b8e201994a1c75ea
-      internalID: -360703923
+      spriteID: 7157a48dd68c8bf4e9a619f8e951139f
+      internalID: 787580366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uAC80\uACF5\uACA9-Sheet_2"
+      name: Attack_Bow 2_2
       rect:
         serializedVersion: 2
         x: 258
         y: 0
-        width: 113
+        width: 123
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -9.5, y: 46}
-        - {x: -38.5, y: 46}
-        - {x: -47.5, y: 43}
-        - {x: -56.5, y: 33}
-        - {x: -56.5, y: -35}
-        - {x: -32.5, y: -46}
-        - {x: 47.5, y: -46}
-        - {x: 56.5, y: -40}
-        - {x: 56.5, y: -14}
-        - {x: -1.5, y: 19}
-      - - {x: 24.5, y: -5}
-        - {x: 24.5, y: -6}
-        - {x: 27.5, y: -9}
-        - {x: 30.5, y: -8}
-        - {x: 30.5, y: -5}
-        - {x: 28.5, y: -3}
-        - {x: 26.5, y: -3}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56b697c894b4a054492299a08aab751e
-      internalID: 707660044
+      spriteID: 06f43e816a48cd7498ee7091af213cae
+      internalID: -1277124319
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uAC80\uACF5\uACA9-Sheet_3"
+      name: Attack_Bow 2_3
       rect:
         serializedVersion: 2
-        x: 387
+        x: 386
         y: 0
-        width: 113
+        width: 123
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 40.5, y: 46}
-        - {x: -50.5, y: 46}
-        - {x: -56.5, y: 34}
-        - {x: -56.5, y: -30}
-        - {x: -31.5, y: -46}
-        - {x: 11.5, y: -46}
-        - {x: 53.5, y: -36}
-        - {x: 55.5, y: -35}
-        - {x: 55.5, y: 30}
-      - - {x: 23.5, y: -5}
-        - {x: 23.5, y: -6}
-        - {x: 26.5, y: -9}
-        - {x: 29.5, y: -8}
-        - {x: 29.5, y: -5}
-        - {x: 27.5, y: -3}
-        - {x: 25.5, y: -3}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 841ebc7add2895841a935c29e7d9e8e4
-      internalID: 1300150219
+      spriteID: ed3a9da8f6255fc4aaee861fa9e5d2ba
+      internalID: 122204457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uAC80\uACF5\uACA9-Sheet_4"
+      name: Attack_Bow 2_4
       rect:
         serializedVersion: 2
-        x: 516
+        x: 514
         y: 0
-        width: 113
+        width: 123
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -43.5, y: -42}
-        - {x: 54.5, y: -42}
-        - {x: 54.5, y: 23}
-        - {x: 32.5, y: 46}
-        - {x: -56.5, y: 46}
-        - {x: -56.5, y: -18}
-      - - {x: 22.5, y: -5}
-        - {x: 22.5, y: -6}
-        - {x: 25.5, y: -9}
-        - {x: 28.5, y: -8}
-        - {x: 28.5, y: -5}
-        - {x: 26.5, y: -3}
-        - {x: 24.5, y: -3}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed1b1434c15a8354daa600e17369bd85
-      internalID: 312078390
+      spriteID: 0c2b9cfb8bb29b04dbfa3d02dd50b4c5
+      internalID: -2134950596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Bow 2_5
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 0
+        width: 123
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5613b87a57d01e74fae9041328551a48
+      internalID: -90793363
       vertices: []
       indices: 
       edges: []
@@ -290,11 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "\uAC80\uACF5\uACA9-Sheet_0": -1928519139
-      "\uAC80\uACF5\uACA9-Sheet_1": -360703923
-      "\uAC80\uACF5\uACA9-Sheet_2": 707660044
-      "\uAC80\uACF5\uACA9-Sheet_3": 1300150219
-      "\uAC80\uACF5\uACA9-Sheet_4": 312078390
+      Attack_Bow 2_0: 2034963477
+      Attack_Bow 2_1: 787580366
+      Attack_Bow 2_2: -1277124319
+      Attack_Bow 2_3: 122204457
+      Attack_Bow 2_4: -2134950596
+      Attack_Bow 2_5: -90793363
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
