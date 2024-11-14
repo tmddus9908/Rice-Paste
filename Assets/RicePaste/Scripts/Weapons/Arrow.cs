@@ -1,6 +1,6 @@
 using RicePaste.Scripts.Manager;
-using RicePaste.Scripts.Players;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace RicePaste.Scripts.Weapons
 {
@@ -16,25 +16,13 @@ namespace RicePaste.Scripts.Weapons
 
         private void Start()
         {
-            _rigidbody.AddForce(GameManager.Instance.player.weapon.GetComponent<PlayerBow>().arrowSpawner.position * speed, ForceMode2D.Impulse);
+            ResetArrowSpeed();
         }
 
         private void OnEnable()
         {
-            _rigidbody.AddForce(GameManager.Instance.player.weapon.GetComponent<PlayerBow>().arrowSpawner.position * speed, ForceMode2D.Impulse);
+            ResetArrowSpeed();
         }
-
-        private void OnDisable()
-        {
-            _rigidbody.velocity = Vector2.zero;
-        }
-
-        public void Init(float damage, float speed)
-        {
-            this.damage = damage;
-            this.speed = speed;
-        }
-
         private void OnTriggerEnter2D(Collider2D other)
         {
             if(other.CompareTag("Enemy"))
@@ -45,6 +33,20 @@ namespace RicePaste.Scripts.Weapons
         {
             if (other.CompareTag("Wall"))
                 gameObject.SetActive(false);
+        }
+        public void Init(float damage, float speed)
+        {
+            this.damage = damage;
+            this.speed = speed;
+        }
+
+        private void ResetArrowSpeed()
+        {
+            Vector2 mousePos = (Vector2)GameManager.Instance.player.CameraMouse;
+            Vector2 dirVec = (mousePos - (Vector2)GameManager.Instance.player.transform.position).normalized;
+            
+            _rigidbody.velocity = Vector2.zero;
+            _rigidbody.AddForce(dirVec * speed, ForceMode2D.Impulse);
         }
     }
 }

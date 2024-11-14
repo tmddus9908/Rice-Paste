@@ -14,7 +14,7 @@ namespace RicePaste.Scripts.Weapons
         {
             _damage = damage;
         }
-        public override void Attack()
+        public void Attack()
         {
             Transform arrow = GameManager.Instance.poolManager.Get(prefabId).transform;;
             arrow.transform.parent = GameManager.Instance.poolManager.transform;

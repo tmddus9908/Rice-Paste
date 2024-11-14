@@ -55,10 +55,16 @@ namespace RicePaste.Scripts.Players
             if (Mouse.current.leftButton.isPressed && Time.time >= _lastAttackTime + attackCooldown)
             {
                 Attack();
+                isAttack = true;
                 _lastAttackTime = Time.time;
             }
             else if (!Mouse.current.leftButton.isPressed)
+            {
+                isAttack = false;
                 weapon.gameObject.SetActive(false);
+            }
+            else if (Time.time < _lastAttackTime + attackCooldown)
+                isAttack = false;
         }
 
         public void OnMove(InputValue value)
@@ -79,7 +85,7 @@ namespace RicePaste.Scripts.Players
 
             weapon.GetComponent<SpriteRenderer>().flipY = CameraMouse.x > 0 ? true : false;
 
-            weapon.Attack();
+            // weapon.Attack();
         }
     }
 }

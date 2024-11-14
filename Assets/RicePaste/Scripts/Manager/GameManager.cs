@@ -10,7 +10,6 @@ namespace RicePaste.Scripts.Manager
         public float maxGameTime = 2 * 10f;
     
         public Player player;
-        public GameObject center;
         public PoolManager poolManager;
 
         private void Awake()

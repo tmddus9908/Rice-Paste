@@ -27,10 +27,10 @@ namespace RicePaste.Scripts.Weapons
             _boxCollider2D.enabled = false;
         }
 
-        public virtual void Attack()
-        {
-            Debug.Log("Weapon의 Attack 입니다.");
-        }
+        // public virtual void Attack()
+        // {
+        //     Debug.Log("Weapon의 Attack 입니다.");
+        // }
 
         
     }

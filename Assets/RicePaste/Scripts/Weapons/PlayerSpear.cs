@@ -11,10 +11,10 @@ namespace RicePaste.Scripts.Weapons
             _damage = damage;
         }
 
-        public override void Attack()
-        {
-            return;
-        }
+        // public override void Attack()
+        // {
+        //     return;
+        // }
     }    
 }
 

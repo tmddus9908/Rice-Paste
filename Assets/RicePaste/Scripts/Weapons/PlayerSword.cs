@@ -10,20 +10,10 @@ namespace RicePaste.Scripts.Weapons
         {
             _damage = damage;
         }
-
-        // private void OnEnable()
+        // public override void Attack()
         // {
-        //     Animator.stop
+        //     return;
         // }
-
-        private void OnDisable()
-        {
-            
-        }
-        public override void Attack()
-        {
-            return;
-        }
     }    
 }
 

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using RicePaste.Scripts.Manager;
 using RicePaste.Scripts.Weapons;
@@ -15,9 +16,9 @@ namespace RicePaste.Scripts.Enemy
 
         public bool isLive;
     
-        Rigidbody2D _rigidbody;
-        Animator _animator;
-        SpriteRenderer _spriteRenderer;
+        private Rigidbody2D _rigidbody;
+        private Animator _animator;
+        private SpriteRenderer _spriteRenderer;
 
         private void OnEnable()
         {
@@ -35,7 +36,7 @@ namespace RicePaste.Scripts.Enemy
 
         private void FixedUpdate()
         {
-            if (!isLive)
+            if (!isLive || _animator.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
                 return;
         
             Vector2 dirVec = target.position - _rigidbody.position;
@@ -67,12 +68,15 @@ namespace RicePaste.Scripts.Enemy
             {
                 case "Shield":
                     health -= other.GetComponent<Shield>().damage;
+                    StartCoroutine(KnockBack());
                     break;
                 case "Weapon":
                     health -= other.GetComponent<Weapon>()._damage;
+                    StartCoroutine(KnockBack());
                     break;
                 case "Arrow":
                     health -= other.GetComponent<Arrow>().damage;
+                    StartCoroutine(KnockBack());
                     break;
                 
                 default:
@@ -80,7 +84,7 @@ namespace RicePaste.Scripts.Enemy
             }
             if (health > 0)
             {
-                // hit action
+                _animator.SetTrigger("Hit");
             }
             else
             {
@@ -88,6 +92,13 @@ namespace RicePaste.Scripts.Enemy
             }
         }
 
+        IEnumerator KnockBack()
+        {
+            yield return null;
+            Vector3 playerPos = GameManager.Instance.player.transform.position;
+            Vector3 dirVec = (transform.position - playerPos).normalized;
+            _rigidbody.AddForce(dirVec * 3, ForceMode2D.Impulse);
+        }
         private void Dead()
         {
             gameObject.SetActive(false);
