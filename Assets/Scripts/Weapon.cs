@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
@@ -22,23 +21,7 @@ public class Weapon : MonoBehaviour
     void Start()
     {
         SwordShape();
-    }
-    public void SetPolygonColliderSize(float sizeMultiplier)
-    {
-        if (_polyCollider == null) return;
-
-        // 기본 경로 가져오기
-        var originalPath = _polyCollider.GetPath(0);
-        Vector2[] newPath = new Vector2[originalPath.Length];
-
-        // 각 점의 위치를 sizeMultiplier로 조정하여 새 경로 생성
-        for (int i = 0; i < originalPath.Length; i++)
-        {
-            newPath[i] = originalPath[i] * sizeMultiplier;
-        }
-
-        // 새 경로를 콜라이더에 적용
-        _polyCollider.SetPath(0, newPath);
+        SpearShape();
     }
     // x 값에만 -1을 곱하는 메서드
     void InvertXOnly(Vector2[][] array)
@@ -63,6 +46,19 @@ public class Weapon : MonoBehaviour
             _isFlipY = false;
         
         _polyCollider.SetPath(0, _swordShape[idx]);
+    }
+    public void SetSpearShape(int idx)
+    {
+        if (_spriteRenderer.flipY && !_isFlipY)
+        {
+            _isFlipY = true;
+            InvertXOnly(_spearShape);
+        }
+        else if(!_spriteRenderer.flipY && _isFlipY)
+            _isFlipY = false;
+        
+        _polyCollider.SetPath(0, _spearShape[idx]);
+        _polyCollider.autoTiling = true;
     }
     private void SwordShape()
     {
@@ -117,6 +113,72 @@ public class Weapon : MonoBehaviour
             new Vector2(-0.2120232f, -0.6262907f),
             new Vector2(0.5652358f, -0.5695989f),
             new Vector2(0.7847222f, -0.4169755f)
+        };
+    }
+
+    private void SpearShape()
+    {
+        _spearShape = new Vector2[6][];
+        
+        _spearShape[0] = new Vector2[]
+        {
+            new Vector2(0.4996701f, 0.5f),
+            new Vector2(0.4070409f, 0.375f),
+            new Vector2(0.1804456f, -0.3980748f),
+            new Vector2(0.1850386f, -0.4998901f),
+            new Vector2(0.2547029f, -0.4401813f),
+            new Vector2(0.4452141f, 0.2218923f),
+            new Vector2(0.5187018f, 0.3530247f)
+        };
+        _spearShape[1] = new Vector2[]
+        {
+            new Vector2(0.5501928f, 0.4678491f),
+            new Vector2(0.4300057f, 0.3474422f),
+            new Vector2(0.1482949f, -0.3934818f),
+            new Vector2(0.1437018f, -0.4769253f),
+            new Vector2(0.240924f, -0.4309953f),
+            new Vector2(0.477365f, 0.2035204f),
+            new Vector2(0.5462596f, 0.3208739f)
+        };
+        _spearShape[2] = new Vector2[]
+        {
+            new Vector2(0.5639718f, 0.4678491f),
+            new Vector2(0.4483777f, 0.4483777f),
+            new Vector2(0.1666668f, -0.3934818f),
+            new Vector2(0.1712597f, -0.4815183f),
+            new Vector2(0.2592959f, -0.4355882f),
+            new Vector2(0.477365f, 0.2035204f),
+            new Vector2(0.5462596f, 0.3208739f)
+        };
+        _spearShape[3] = new Vector2[]
+        {
+            new Vector2(-0.3770989f, -0.1326673f),
+            new Vector2(-0.1891896f, -0.1847921f),
+            new Vector2(-0.06578487f, -0.163833f),
+            new Vector2(0.6397434f, -0.1508239f),
+            new Vector2(0.6552386f, -0.08192903f),
+            new Vector2(0.6319828f, -0.0848904f),
+            new Vector2(-0.2391395f, -0.07871521f)
+        };
+        _spearShape[4] = new Vector2[]
+        {
+            new Vector2(-0.8951366f, -0.127097f),
+            new Vector2(-0.4443005f, -0.235143f),
+            new Vector2(-0.06578487f, -0.163833f),
+            new Vector2(0.8377901f, -0.1508239f),
+            new Vector2(0.8197181f, -0.1188529f),
+            new Vector2(0.6689068f, -0.06810674f),
+            new Vector2(-0.3802068f, -0.01294208f)
+        };
+        _spearShape[5] = new Vector2[]
+        {
+            new Vector2(-0.8338196f, -0.1301629f),
+            new Vector2(-0.6527786f, -0.1860893f),
+            new Vector2(-0.5256631f, -0.1668988f),
+            new Vector2(0.187829f, -0.1416263f),
+            new Vector2(0.1942838f, -0.09126025f),
+            new Vector2(-0.5175788f, -0.08037016f),
+            new Vector2(-0.6254751f, -0.06812739f),
         };
     }
 }
