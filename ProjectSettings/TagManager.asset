@@ -8,6 +8,9 @@ TagManager:
   - Area
   - Enemy
   - Shield
+  - Weapon
+  - Wall
+  - Arrow
   layers:
   - Default
   - TransparentFX
