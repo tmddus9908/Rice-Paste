@@ -64,24 +64,13 @@ namespace RicePaste.Scripts.Enemy
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            switch (other.tag)
-            {
-                case "Shield":
-                    health -= other.GetComponent<Shield>().damage;
-                    StartCoroutine(KnockBack());
-                    break;
-                case "Weapon":
-                    health -= other.GetComponent<Weapon>()._damage;
-                    StartCoroutine(KnockBack());
-                    break;
-                case "Arrow":
-                    health -= other.GetComponent<Arrow>().damage;
-                    StartCoroutine(KnockBack());
-                    break;
-                
-                default:
-                    return;
-            }
+            if (!other.CompareTag("Weapon") || _animator.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
+                return;
+            
+            health -= other.GetComponent<Weapon>()._damage;
+            
+            KnockBack(other);
+            
             if (health > 0)
             {
                 _animator.SetTrigger("Hit");
@@ -92,12 +81,11 @@ namespace RicePaste.Scripts.Enemy
             }
         }
 
-        IEnumerator KnockBack()
+        private void KnockBack(Collider2D collision)
         {
-            yield return null;
             Vector3 playerPos = GameManager.Instance.player.transform.position;
             Vector3 dirVec = (transform.position - playerPos).normalized;
-            _rigidbody.AddForce(dirVec * 3, ForceMode2D.Impulse);
+            _rigidbody.AddForce(dirVec * collision.GetComponent<Weapon>()._knockBack , ForceMode2D.Impulse);
         }
         private void Dead()
         {

@@ -9,6 +9,8 @@ namespace RicePaste.Scripts.Weapons
         private BoxCollider2D _boxCollider2D;
         
         [NonSerialized]
+        public float _knockBack;
+        [NonSerialized]
         public float _damage;
         [NonSerialized]
         public Animator Animator;

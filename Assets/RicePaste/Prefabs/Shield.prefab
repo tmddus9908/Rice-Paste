@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5430537775600394180}
   m_Layer: 0
   m_Name: Shield
-  m_TagString: Shield
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,5 +143,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddd166c39d432ba4ea7d7fcc612b6eba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 11
-  per: 0
+  damage: 6
+  knockback: 0.2

@@ -28,7 +28,7 @@ namespace RicePaste.Scripts.Weapons
 
             if (Input.GetButtonDown("Jump"))
             {
-                LevelUp(20, 1);
+                LevelUp(11, 1);
             }
         }
 

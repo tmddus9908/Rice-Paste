@@ -2,22 +2,13 @@ using System;
 using RicePaste.Scripts.Weapons;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 
 namespace RicePaste.Scripts.Players
 {
     public class Player : MonoBehaviour
     {
-        public float attackCooldown;
-        private float _lastAttackTime = -Mathf.Infinity;
-        
-        
-        
-        public float moveSpeed;
-        
-        public bool isAttack;
-        public Weapon weapon;
-        
         [NonSerialized]
         public Vector2 InputVec;
         [NonSerialized]
@@ -25,7 +16,14 @@ namespace RicePaste.Scripts.Players
         [NonSerialized]
         public float Angle;
         
-        
+        public float attackCooldown;
+        public float moveSpeed;
+        public bool isAttack;
+        public Weapon[] weapons = new Weapon[3];
+        public Weapon equippedWeapon;
+
+        private int _weaponCount;
+        private float _lastAttackTime = -Mathf.Infinity;
         private Rigidbody2D _rigidbody;
         private SpriteRenderer _spriteRenderer;
         private Animator _animator;
@@ -61,7 +59,7 @@ namespace RicePaste.Scripts.Players
             else if (!Mouse.current.leftButton.isPressed)
             {
                 isAttack = false;
-                weapon.gameObject.SetActive(false);
+                equippedWeapon.gameObject.SetActive(false);
             }
             else if (Time.time < _lastAttackTime + attackCooldown)
                 isAttack = false;
@@ -72,20 +70,30 @@ namespace RicePaste.Scripts.Players
             InputVec = value.Get<Vector2>();
         }
 
+        public void OnSwap()
+        {
+            SwapWeapon();
+        }
         private void Attack()
         {
             Vector2 mousePosition = Mouse.current.position.ReadValue();
             CameraMouse= Camera.main.ScreenToWorldPoint(new Vector2(mousePosition.x, mousePosition.y));
-            weapon.transform.position = CameraMouse;
+            equippedWeapon.transform.position = CameraMouse;
             
-            weapon.gameObject.SetActive(true);
+            equippedWeapon.gameObject.SetActive(true);
             
             Angle = Mathf.Atan2(CameraMouse.y - transform.position.y, CameraMouse.x - transform.position.x) * Mathf.Rad2Deg;
-            weapon.transform.rotation = Quaternion.AngleAxis(Angle - 180, Vector3.forward);
+            equippedWeapon.transform.rotation = Quaternion.AngleAxis(Angle - 180, Vector3.forward);
 
-            weapon.GetComponent<SpriteRenderer>().flipY = CameraMouse.x > 0 ? true : false;
+            equippedWeapon.GetComponent<SpriteRenderer>().flipY = CameraMouse.x > 0 ? true : false;
+        }
 
-            // weapon.Attack();
+        private void SwapWeapon()
+        {
+            ++_weaponCount;
+            equippedWeapon = weapons[_weaponCount];
+            if (_weaponCount == 2)
+                _weaponCount = -1;
         }
     }
 }
