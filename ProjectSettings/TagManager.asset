@@ -11,6 +11,7 @@ TagManager:
   - Weapon
   - Wall
   - Arrow
+  - Range
   layers:
   - Default
   - TransparentFX

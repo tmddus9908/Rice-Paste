@@ -79,7 +79,7 @@ namespace RicePaste.Scripts.Players
             Vector2 mousePosition = Mouse.current.position.ReadValue();
             CameraMouse= Camera.main.ScreenToWorldPoint(new Vector2(mousePosition.x, mousePosition.y));
             equippedWeapon.transform.position = CameraMouse;
-            
+                
             equippedWeapon.gameObject.SetActive(true);
             
             Angle = Mathf.Atan2(CameraMouse.y - transform.position.y, CameraMouse.x - transform.position.x) * Mathf.Rad2Deg;

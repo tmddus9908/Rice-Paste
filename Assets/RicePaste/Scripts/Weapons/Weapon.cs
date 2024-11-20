@@ -6,6 +6,8 @@ namespace RicePaste.Scripts.Weapons
 {
     public class Weapon : MonoBehaviour
     {
+        // public float radius;        
+        
         private BoxCollider2D _boxCollider2D;
         
         [NonSerialized]
