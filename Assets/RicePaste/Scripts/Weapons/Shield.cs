@@ -1,8 +1,9 @@
 using System;
+using UnityEngine;
 
 namespace RicePaste.Scripts.Weapons
 {
-    public class Shield : Weapon
+    public class Shield : MonoBehaviour
     {
         public float damage;
         public float knockback;
@@ -13,8 +14,6 @@ namespace RicePaste.Scripts.Weapons
         {
             this.damage = damage;
             this.per = per;
-            _damage = damage;
-            _knockBack = knockback;
         }
     }
 }

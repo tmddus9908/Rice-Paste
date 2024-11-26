@@ -50,6 +50,9 @@ namespace RicePaste.Scripts.Players
 
         private void Update()
         {
+            Vector2 mousePosition = Mouse.current.position.ReadValue();
+            CameraMouse= Camera.main.ScreenToWorldPoint(new Vector2(mousePosition.x, mousePosition.y));
+            
             if (Mouse.current.leftButton.isPressed && Time.time >= _lastAttackTime + attackCooldown)
             {
                 Attack();
@@ -59,7 +62,6 @@ namespace RicePaste.Scripts.Players
             else if (!Mouse.current.leftButton.isPressed)
             {
                 isAttack = false;
-                equippedWeapon.gameObject.SetActive(false);
             }
             else if (Time.time < _lastAttackTime + attackCooldown)
                 isAttack = false;
@@ -76,15 +78,9 @@ namespace RicePaste.Scripts.Players
         }
         private void Attack()
         {
-            Vector2 mousePosition = Mouse.current.position.ReadValue();
-            CameraMouse= Camera.main.ScreenToWorldPoint(new Vector2(mousePosition.x, mousePosition.y));
-            equippedWeapon.transform.position = CameraMouse;
-                
-            equippedWeapon.gameObject.SetActive(true);
-            
             Angle = Mathf.Atan2(CameraMouse.y - transform.position.y, CameraMouse.x - transform.position.x) * Mathf.Rad2Deg;
             equippedWeapon.transform.rotation = Quaternion.AngleAxis(Angle - 180, Vector3.forward);
-
+            
             equippedWeapon.GetComponent<SpriteRenderer>().flipY = CameraMouse.x > 0 ? true : false;
         }
 

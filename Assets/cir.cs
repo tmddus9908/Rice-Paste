@@ -1,25 +1,27 @@
-
 using System;
 using RicePaste.Scripts.Manager;
 using UnityEngine;
 
 public class cir : MonoBehaviour
 {
-    private Collider2D _circleCollider; // 검사할 Collider2D
-
-    private void Awake()
-    {
-        _circleCollider = GetComponent<CircleCollider2D>();
-    }
+    public Vector2 center; // 원의 중심 (Screen Space 좌표)
+    public float radius; // 원의 반지름
 
     void Update()
     {
-        if (_circleCollider.bounds.Contains(GameManager.Instance.player.CameraMouse))
-        {
-            RaycastHit2D hit = Physics2D.Raycast(GameManager.Instance.player.CameraMouse, Vector2.zero);
+        center = GameManager.Instance.player.transform.position;
 
-            if (hit.collider != null)
-                Debug.Log("Raycast가 " + hit.collider.gameObject.name + "에 반응했습니다!");
+        float distance = Vector2.Distance(center, GameManager.Instance.player.CameraMouse);
+        
+        if (distance > radius)
+        {
+            Debug.Log("나갔다");
+            GameManager.Instance.player.equippedWeapon.gameObject.SetActive(false);
+        }
+        else if (distance <= radius)
+        {            
+            Debug.Log("들어옴");
+            GameManager.Instance.player.equippedWeapon.gameObject.SetActive(true);
         }
     }
 }

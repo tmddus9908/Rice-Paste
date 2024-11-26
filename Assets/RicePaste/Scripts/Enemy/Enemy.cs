@@ -67,7 +67,10 @@ namespace RicePaste.Scripts.Enemy
             if (!other.CompareTag("Weapon") || _animator.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
                 return;
             
-            health -= other.GetComponent<Weapon>()._damage;
+            if(other.GetComponent<Weapon>())
+                health -= other.GetComponent<Weapon>()._damage;
+            else if(other.GetComponent<Shield>())
+                health -= other.GetComponent<Shield>().damage;
             
             KnockBack(other);
             
@@ -85,7 +88,11 @@ namespace RicePaste.Scripts.Enemy
         {
             Vector3 playerPos = GameManager.Instance.player.transform.position;
             Vector3 dirVec = (transform.position - playerPos).normalized;
-            _rigidbody.AddForce(dirVec * collision.GetComponent<Weapon>()._knockBack , ForceMode2D.Impulse);
+            
+            if(collision.GetComponent<Weapon>())
+                _rigidbody.AddForce(dirVec * collision.GetComponent<Weapon>()._knockBack , ForceMode2D.Impulse);
+            else if(collision.GetComponent<Shield>())
+                _rigidbody.AddForce(dirVec * collision.GetComponent<Shield>().knockback , ForceMode2D.Impulse);
         }
         private void Dead()
         {
