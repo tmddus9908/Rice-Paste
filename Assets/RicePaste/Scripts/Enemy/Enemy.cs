@@ -22,7 +22,7 @@ namespace RicePaste.Scripts.Enemy
 
         private void OnEnable()
         {
-            target = GameManager.Instance.player.GetComponent<Rigidbody2D>();
+            target = GameManager.instance.player.GetComponent<Rigidbody2D>();
             isLive = true;
             health = maxHealth;
         }
@@ -64,16 +64,16 @@ namespace RicePaste.Scripts.Enemy
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (!other.CompareTag("Weapon") || _animator.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
+            if (!other.CompareTag("Weapon") || _animator.GetCurrentAnimatorStateInfo(0).IsName("Hit") || !isLive)
                 return;
             
             if(other.GetComponent<Weapon>())
                 health -= other.GetComponent<Weapon>().Damage;
             else if(other.GetComponent<Shield>())
                 health -= other.GetComponent<Shield>().damage;
-            else if(other.GetComponent<Arrow>())
+            else if (other.GetComponent<Arrow>())
                 health -= other.GetComponent<Arrow>().Damage;
-            
+
             KnockBack(other);
             
             if (health > 0)
@@ -82,13 +82,16 @@ namespace RicePaste.Scripts.Enemy
             }
             else
             {
+                isLive = false;
                 Dead();
+                GameManager.instance.kill++;
+                GameManager.instance.GetExp();
             }
         }
 
         private void KnockBack(Collider2D collision)
         {
-            Vector3 playerPos = GameManager.Instance.player.transform.position;
+            Vector3 playerPos = GameManager.instance.player.transform.position;
             Vector3 dirVec = (transform.position - playerPos).normalized;
             
             if(collision.GetComponent<Weapon>())

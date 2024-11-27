@@ -43,8 +43,8 @@ namespace RicePaste.Scripts.Weapons
         }
         private void ResetArrowSpeed()
         {
-            Vector2 mousePos = (Vector2)GameManager.Instance.player.CameraMouse;
-            Vector2 dirVec = (mousePos - (Vector2)GameManager.Instance.player.transform.position).normalized;
+            Vector2 mousePos = (Vector2)GameManager.instance.player.CameraMouse;
+            Vector2 dirVec = (mousePos - (Vector2)GameManager.instance.player.transform.position).normalized;
             
             _rigidbody.velocity = Vector2.zero;
             _rigidbody.AddForce(dirVec * _speed, ForceMode2D.Impulse);

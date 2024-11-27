@@ -9,7 +9,7 @@ namespace RicePaste.Scripts.Weapons.AnimCS
         private Player _player;
         public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
-            _player = GameManager.Instance.player;
+            _player = GameManager.instance.player;
             animator.SetBool("isAttack", false);
         }
 

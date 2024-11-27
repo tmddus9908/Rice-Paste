@@ -20,7 +20,7 @@ namespace RicePaste.Scripts.Enemy
         void Update()
         {
             _timer += Time.deltaTime;
-            _level = Mathf.Min(Mathf.FloorToInt(GameManager.Instance.gameTime / 10f), spawnData.Length - 1); // 소수점 아래 삭제 후 정수만 사용, CeilToInt -> 소수점 아래 올리고 Int로 사용
+            _level = Mathf.Min(Mathf.FloorToInt(GameManager.instance.gameTime / 10f), spawnData.Length - 1); // 소수점 아래 삭제 후 정수만 사용, CeilToInt -> 소수점 아래 올리고 Int로 사용
         
             if (_timer > spawnData[_level].spawnTime)
             {
@@ -31,7 +31,7 @@ namespace RicePaste.Scripts.Enemy
 
         private void Spawn()
         {
-            GameObject enemy = GameManager.Instance.poolManager.Get(0);
+            GameObject enemy = GameManager.instance.poolManager.Get(0);
             enemy.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
             enemy.GetComponent<Enemy>().Init(spawnData[_level]);
         }

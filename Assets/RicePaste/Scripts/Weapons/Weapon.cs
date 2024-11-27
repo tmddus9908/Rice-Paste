@@ -24,7 +24,7 @@ namespace RicePaste.Scripts.Weapons
         {
             _boxCollider2D = GetComponent<BoxCollider2D>();
             Animator = GetComponent<Animator>();
-            _player = GameManager.Instance.player;
+            _player = GameManager.instance.player;
         }
 
         private void Update()
@@ -39,7 +39,7 @@ namespace RicePaste.Scripts.Weapons
 
         protected virtual void OnEnable()
         {
-            transform.position = GameManager.Instance.player.CameraMouse;
+            transform.position = GameManager.instance.player.CameraMouse;
         }
 
         private void OnCollider()
@@ -55,8 +55,8 @@ namespace RicePaste.Scripts.Weapons
         protected void SetRadius(float radius)
         {
             Radius = radius;
-            GameManager.Instance.player.GetComponentInChildren<PlayerAttackRange>().Radius = this.Radius;
-            GameManager.Instance.player.GetComponentInChildren<PlayerAttackRange>().SetAttackRangeSprite();
+            GameManager.instance.player.GetComponentInChildren<PlayerAttackRange>().Radius = this.Radius;
+            GameManager.instance.player.GetComponentInChildren<PlayerAttackRange>().SetAttackRangeSprite();
         }
         // public virtual void Attack()
         // {

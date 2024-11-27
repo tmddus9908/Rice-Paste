@@ -28,16 +28,16 @@ namespace RicePaste.Scripts.Weapons
 
         public void Attack()
         {
-            Transform arrow = GameManager.Instance.poolManager.Get(prefabId).transform;;
-            arrow.transform.parent = GameManager.Instance.poolManager.transform;
+            Transform arrow = GameManager.instance.poolManager.Get(prefabId).transform;;
+            arrow.transform.parent = GameManager.instance.poolManager.transform;
             
             arrow.localPosition = Vector3.zero;
             arrow.localRotation = Quaternion.identity;
             
             arrow.position = arrowSpawner.position;
             arrow.GetComponent<Arrow>().Init(damage, knockback, arrowSpeed);
-            arrow.transform.rotation = Quaternion.AngleAxis(GameManager.Instance.player.Angle - 180, Vector3.forward);
-            arrow.GetComponent<SpriteRenderer>().flipY = GameManager.Instance.player.CameraMouse.x > 0 ? true : false;
+            arrow.transform.rotation = Quaternion.AngleAxis(GameManager.instance.player.Angle - 180, Vector3.forward);
+            arrow.GetComponent<SpriteRenderer>().flipY = GameManager.instance.player.CameraMouse.x > 0 ? true : false;
         }
     }
 }

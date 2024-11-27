@@ -66,7 +66,7 @@ namespace RicePaste.Scripts.Weapons
                 }
                 else
                 {
-                    shield = GameManager.Instance.poolManager.Get(prefabId).transform;
+                    shield = GameManager.instance.poolManager.Get(prefabId).transform;
                     shield.transform.parent = transform;
                 }
 

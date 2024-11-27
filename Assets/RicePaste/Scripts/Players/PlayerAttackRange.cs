@@ -12,16 +12,15 @@ namespace RicePaste.Scripts.Players
         
         private void Update()
         {
-            Debug.Log(Radius);
-            center = GameManager.Instance.player.transform.position;
+            center = GameManager.instance.player.transform.position;
 
-            float distance = Vector2.Distance(center, GameManager.Instance.player.CameraMouse);
+            float distance = Vector2.Distance(center, GameManager.instance.player.CameraMouse);
 
             if (distance > Radius)
-                GameManager.Instance.player.equippedWeapon.gameObject.SetActive(false);
+                GameManager.instance.player.equippedWeapon.gameObject.SetActive(false);
 
             else if (distance <= Radius)
-                GameManager.Instance.player.equippedWeapon.gameObject.SetActive(true);
+                GameManager.instance.player.equippedWeapon.gameObject.SetActive(true);
         }
 
         public void SetAttackRangeSprite()
