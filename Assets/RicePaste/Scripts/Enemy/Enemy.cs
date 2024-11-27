@@ -68,9 +68,11 @@ namespace RicePaste.Scripts.Enemy
                 return;
             
             if(other.GetComponent<Weapon>())
-                health -= other.GetComponent<Weapon>()._damage;
+                health -= other.GetComponent<Weapon>().Damage;
             else if(other.GetComponent<Shield>())
                 health -= other.GetComponent<Shield>().damage;
+            else if(other.GetComponent<Arrow>())
+                health -= other.GetComponent<Arrow>().Damage;
             
             KnockBack(other);
             
@@ -90,9 +92,11 @@ namespace RicePaste.Scripts.Enemy
             Vector3 dirVec = (transform.position - playerPos).normalized;
             
             if(collision.GetComponent<Weapon>())
-                _rigidbody.AddForce(dirVec * collision.GetComponent<Weapon>()._knockBack , ForceMode2D.Impulse);
+                _rigidbody.AddForce(dirVec * collision.GetComponent<Weapon>().KnockBack , ForceMode2D.Impulse);
             else if(collision.GetComponent<Shield>())
                 _rigidbody.AddForce(dirVec * collision.GetComponent<Shield>().knockback , ForceMode2D.Impulse);
+            else if(collision.GetComponent<Arrow>())
+                _rigidbody.AddForce(dirVec * collision.GetComponent<Arrow>().Knockback , ForceMode2D.Impulse);
         }
         private void Dead()
         {

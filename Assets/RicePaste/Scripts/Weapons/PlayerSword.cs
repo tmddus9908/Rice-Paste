@@ -6,11 +6,18 @@ namespace RicePaste.Scripts.Weapons
     {
         public float damage;
         public float knockback;
-        
+        public float radius;
+
         private void Start()
         {
-            _damage = damage;
-            _knockBack = knockback;
+            Damage = damage;
+            KnockBack = knockback;
+            SetRadius(radius);
+        }
+        protected override void OnEnable()
+        {
+            base.OnEnable();
+            SetRadius(radius);
         }
         // public override void Attack()
         // {

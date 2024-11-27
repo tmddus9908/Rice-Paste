@@ -1,4 +1,5 @@
 using RicePaste.Scripts.Manager;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -10,13 +11,21 @@ namespace RicePaste.Scripts.Weapons
         public float damage;
         public float knockback;
         public float arrowSpeed;
+        public float radius;
         public Transform arrowSpawner;
 
         private void Start()
         {
-            _damage = damage;
-            _knockBack = knockback;
+            Damage = damage;
+            KnockBack = knockback;
         }
+
+        protected override void OnEnable()
+        {
+            base.OnEnable();
+            SetRadius(radius);
+        }
+
         public void Attack()
         {
             Transform arrow = GameManager.Instance.poolManager.Get(prefabId).transform;;
@@ -29,7 +38,6 @@ namespace RicePaste.Scripts.Weapons
             arrow.GetComponent<Arrow>().Init(damage, knockback, arrowSpeed);
             arrow.transform.rotation = Quaternion.AngleAxis(GameManager.Instance.player.Angle - 180, Vector3.forward);
             arrow.GetComponent<SpriteRenderer>().flipY = GameManager.Instance.player.CameraMouse.x > 0 ? true : false;
-            
         }
     }
 }

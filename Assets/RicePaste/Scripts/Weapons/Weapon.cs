@@ -7,15 +7,17 @@ namespace RicePaste.Scripts.Weapons
 {
     public class Weapon : MonoBehaviour
     {
-        // public float radius;        
+        
         
         private BoxCollider2D _boxCollider2D;
         private Player _player;
         
         [NonSerialized]
-        public float _knockBack;
+        public float KnockBack;
         [NonSerialized]
-        public float _damage;
+        public float Damage;
+        [NonSerialized]
+        public float Radius;      
         [NonSerialized]
         public Animator Animator;
         private void Awake()
@@ -35,7 +37,7 @@ namespace RicePaste.Scripts.Weapons
             // _player.equippedWeapon.GetComponent<SpriteRenderer>().flipY = _player.CameraMouse.x > 0 ? true : false;
         }
 
-        private void OnEnable()
+        protected virtual void OnEnable()
         {
             transform.position = GameManager.Instance.player.CameraMouse;
         }
@@ -50,6 +52,12 @@ namespace RicePaste.Scripts.Weapons
             _boxCollider2D.enabled = false;
         }
 
+        protected void SetRadius(float radius)
+        {
+            Radius = radius;
+            GameManager.Instance.player.GetComponentInChildren<PlayerAttackRange>().Radius = this.Radius;
+            GameManager.Instance.player.GetComponentInChildren<PlayerAttackRange>().SetAttackRangeSprite();
+        }
         // public virtual void Attack()
         // {
         //     Debug.Log("Weapon의 Attack 입니다.");

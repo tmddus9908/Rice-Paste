@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5300322261330819287}
   m_Layer: 0
   m_Name: Arrow
-  m_TagString: Weapon
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,5 +171,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a686398782377a46b71bb47fcc01ef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
-  speed: 0
