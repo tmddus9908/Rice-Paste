@@ -14622,10 +14622,12 @@ MonoBehaviour:
     spawnTime: 0.3
     health: 10
     speed: 1.5
+    damage: 5
   - spriteType: 1
     spawnTime: 0.7
     health: 15
     speed: 2.4
+    damage: 7
 --- !u!1 &897915619
 GameObject:
   m_ObjectHideFlags: 0
@@ -20147,6 +20149,7 @@ MonoBehaviour:
   attackCooldown: 0
   moveSpeed: 5
   isAttack: 0
+  isHit: 0
   weapons:
   - {fileID: 510434313}
   - {fileID: 141457836}

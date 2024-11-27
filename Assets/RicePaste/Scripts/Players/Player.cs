@@ -1,4 +1,5 @@
 using System;
+using RicePaste.Scripts.Manager;
 using RicePaste.Scripts.Weapons;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -19,11 +20,13 @@ namespace RicePaste.Scripts.Players
         public float attackCooldown;
         public float moveSpeed;
         public bool isAttack;
+        public bool isHit;
         public Weapon[] weapons = new Weapon[3];
         public Weapon equippedWeapon;
 
         private int _weaponCount;
         private float _lastAttackTime = -Mathf.Infinity;
+       
         private Rigidbody2D _rigidbody;
         private SpriteRenderer _spriteRenderer;
         private Animator _animator;
@@ -67,6 +70,17 @@ namespace RicePaste.Scripts.Players
                 isAttack = false;
         }
 
+        private void OnCollisionEnter2D(Collision2D other)
+        {
+            if (other.transform.CompareTag("Enemy") && !isHit)
+            {
+                isHit = true;
+                GameManager.instance.health -= other.gameObject.GetComponent<Enemy.Enemy>().attackDamage;
+                Debug.Log("부딪혔다! " +  GameManager.instance.health);
+                _animator.SetTrigger("Hit");
+            }
+        }
+
         public void OnMove(InputValue value)
         {
             InputVec = value.Get<Vector2>();
@@ -86,8 +100,14 @@ namespace RicePaste.Scripts.Players
 
         private void SwapWeapon()
         {
+            equippedWeapon.gameObject.SetActive(false);
+            
             ++_weaponCount;
+            
             equippedWeapon = weapons[_weaponCount];
+            
+            equippedWeapon.gameObject.SetActive(true);
+            
             if (_weaponCount == 2)
                 _weaponCount = -1;
         }

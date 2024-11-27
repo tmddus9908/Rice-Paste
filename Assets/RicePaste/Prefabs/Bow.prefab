@@ -208,5 +208,5 @@ MonoBehaviour:
   damage: 11
   knockback: 0.1
   arrowSpeed: 5
-  radius: 2
+  radius: 2.5
   arrowSpawner: {fileID: 4500195293755095258}

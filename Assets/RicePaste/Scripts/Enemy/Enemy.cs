@@ -10,12 +10,14 @@ namespace RicePaste.Scripts.Enemy
         public float speed;
         public float health;
         public float maxHealth;
-    
+        public int attackDamage;
+        
         public RuntimeAnimatorController[] animatorControllers;
         public Rigidbody2D target;
 
         public bool isLive;
-    
+        public bool isHit = false;
+        
         private Rigidbody2D _rigidbody;
         private Animator _animator;
         private SpriteRenderer _spriteRenderer;
@@ -60,13 +62,14 @@ namespace RicePaste.Scripts.Enemy
             speed = data.speed;
             maxHealth = data.health;
             health = data.health;
+            attackDamage = data.damage;
         }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (!other.CompareTag("Weapon") || _animator.GetCurrentAnimatorStateInfo(0).IsName("Hit") || !isLive)
+            if (!other.CompareTag("Weapon") || _animator.GetCurrentAnimatorStateInfo(0).IsName("Hit") || !isLive || isHit)
                 return;
-            
+
             if(other.GetComponent<Weapon>())
                 health -= other.GetComponent<Weapon>().Damage;
             else if(other.GetComponent<Shield>())
