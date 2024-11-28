@@ -79,6 +79,9 @@ namespace RicePaste.Scripts.Players
                 Debug.Log("부딪혔다! " +  GameManager.instance.health);
                 _animator.SetTrigger("Hit");
             }
+            
+            if(GameManager.instance.health == 0)
+                gameObject.SetActive(false);
         }
 
         public void OnMove(InputValue value)
