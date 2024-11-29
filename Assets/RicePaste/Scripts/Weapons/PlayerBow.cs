@@ -1,29 +1,20 @@
 using RicePaste.Scripts.Manager;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace RicePaste.Scripts.Weapons
 {
     public class PlayerBow : Weapon
     {
         public int prefabId;
-        public float damage;
-        public float knockback;
         public float arrowSpeed;
-        public float radius;
+        public int arrowCount;
         public Transform arrowSpawner;
 
-        private void Start()
-        {
-            Damage = damage;
-            KnockBack = knockback;
-        }
 
-        protected override void OnEnable()
+        protected override void Start()
         {
-            base.OnEnable();
-            SetRadius(radius);
+            base.Start();
+            arrowCount = itemData.baseCount;
         }
 
         public void Attack()
@@ -35,9 +26,19 @@ namespace RicePaste.Scripts.Weapons
             arrow.localRotation = Quaternion.identity;
             
             arrow.position = arrowSpawner.position;
-            arrow.GetComponent<Arrow>().Init(damage, knockback, arrowSpeed);
+            arrow.GetComponent<Arrow>().Init(damage, knockBack, arrowSpeed, arrowCount);
             arrow.transform.rotation = Quaternion.AngleAxis(GameManager.instance.player.Angle - 180, Vector3.forward);
             arrow.GetComponent<SpriteRenderer>().flipY = GameManager.instance.player.CameraMouse.x > 0 ? true : false;
+        }
+
+        public void SetRangeWeaponStatus(float KnockBack, float Damage, float Radius, int Speed, int Count)
+        {
+            knockBack = KnockBack;
+            damage = Damage;
+            radius = Radius;
+            arrowSpeed += Speed;
+            arrowCount = Count;
+            SetRadius(radius);
         }
     }
 }

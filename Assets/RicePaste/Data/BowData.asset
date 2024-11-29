@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b0ba4cf28186a6409cd97d56eff3792, type: 3}
+  m_Name: BowData
+  m_EditorClassIdentifier: 
+  itemType: 1
+  itemName: Bow
+  itemDesc: 
+  itemIcon: {fileID: 1846844586, guid: 00200a7563bfc5b40951fd069fa9a2ef, type: 3}
+  baseDamage: 11
+  baseCount: 1
+  baseKnockback: 0.1
+  baseRange: 2.5
+  damages:
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  counts: 0100000001000000020000000300000004000000
+  knockbacks:
+  - 0.1
+  - 0.1
+  - 0.15
+  - 0.2
+  - 0.25
+  ranges:
+  - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
+  projectile: {fileID: 6241937144511781281, guid: bc3f3f5674b5dca419196e07f882378c, type: 3}

@@ -10,10 +10,11 @@ namespace RicePaste.Scripts.Weapons
         [NonSerialized]
         public int per;
 
-        public void Init(float damage, int per)
+        public void Init(float damage, int per, float knockback)
         {
             this.damage = damage;
             this.per = per;
+            this.knockback = knockback;
         }
     }
 }

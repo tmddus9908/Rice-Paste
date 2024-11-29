@@ -44,12 +44,12 @@ namespace RicePaste.Scripts.Enemy
         
                     }
                     break;
-                // case "Enemy":
-                //     if (_collider2D.enabled)
-                //     {
-                //         transform.Translate(playerDir * 20 + new Vector3(Random.Range(-3f, 3f), Random.Range(-3f, 3f), 0f));
-                //     }
-                //     break;
+                case "Enemy":
+                    if (_collider2D.enabled)
+                    {
+                        transform.Translate(playerDir * 20 + new Vector3(Random.Range(-3f, 3f), Random.Range(-3f, 3f), 0f));
+                    }
+                    break;
             }
         }
         private int CompareValues(float x, float y)

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8521138201406373523}
   - component: {fileID: 7494737554866727421}
   - component: {fileID: 7816384000525610534}
-  - component: {fileID: 4339796580728481691}
+  - component: {fileID: 1584619864863450872}
   m_Layer: 0
   m_Name: Spear
   m_TagString: Weapon
@@ -115,7 +115,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4731021399649986522}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -153,7 +153,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7566847, y: 0.40089756}
   m_EdgeRadius: 0
---- !u!114 &4339796580728481691
+--- !u!114 &1584619864863450872
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,9 +162,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4731021399649986522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dce06e019b67d94ea115aa0ef32c731, type: 3}
+  m_Script: {fileID: 11500000, guid: 6949095b8522b4042a95d6729ec1628d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
-  knockback: 0.7
-  radius: 5
+  itemData: {fileID: 11400000, guid: 33d077ed8a7b91642b21e236d7352d01, type: 2}
+  KnockBack: 0
+  Damage: 0
+  Radius: 0

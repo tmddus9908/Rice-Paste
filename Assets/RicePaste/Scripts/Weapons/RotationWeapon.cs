@@ -1,3 +1,4 @@
+using RicePaste.Scripts.Item;
 using RicePaste.Scripts.Manager;
 using UnityEngine;
 
@@ -5,15 +6,21 @@ namespace RicePaste.Scripts.Weapons
 {
     public class RotationWeapon : MonoBehaviour
     {
+        public ItemData itemData;
         public int id;
         public int prefabId;
         public float damage;
         public int count;
+        public float knockback;
         public float speed;
 
 
         private void Start()
         {
+            damage = itemData.baseDamage;
+            knockback = itemData.baseKnockback;
+            count = itemData.baseCount;
+            
             Init();
         }
 
@@ -26,17 +33,18 @@ namespace RicePaste.Scripts.Weapons
                     break;
             }
 
-            if (Input.GetButtonDown("Jump"))
-            {
-                LevelUp(11, 1);
-            }
+            // if (Input.GetButtonDown("Jump"))
+            // {
+            //     LevelUp(11, 1);
+            // }
         }
 
-        private void LevelUp(float damage, int count)
+        public void SetRotationWeaponStatus(float damage, int count, float knockback)
         {
             this.damage = damage;
-            this.count += count;
-
+            this.count = count;
+            this.knockback = knockback;
+            
             if (id == 0)
             {
                 Batch();
@@ -76,7 +84,7 @@ namespace RicePaste.Scripts.Weapons
                 Vector3 rotVec = Vector3.back * 360 * i / count;
                 shield.Rotate(rotVec);
                 shield.Translate(shield.up * 1.5f, Space.World);
-                shield.GetComponent<Shield>().Init(damage, -1); // -1 is infinity per
+                shield.GetComponent<Shield>().Init(damage, -1, knockback); // -1 is infinity per
             }
         }
     }

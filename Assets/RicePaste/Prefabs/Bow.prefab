@@ -204,9 +204,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0fe29c670e0d844b58d63f004eb22e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemData: {fileID: 11400000, guid: c68e8763ac3b3594b8fbd86a460aa672, type: 2}
+  knockBack: 0
+  damage: 0
+  radius: 0
   prefabId: 2
-  damage: 11
-  knockback: 0.1
   arrowSpeed: 5
-  radius: 2.5
+  arrowCount: 0
   arrowSpawner: {fileID: 4500195293755095258}

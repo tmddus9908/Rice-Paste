@@ -1,7 +1,9 @@
 using System;
+using RicePaste.Scripts.Item;
 using RicePaste.Scripts.Manager;
 using RicePaste.Scripts.Players;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace RicePaste.Scripts.Weapons
 {
@@ -12,12 +14,11 @@ namespace RicePaste.Scripts.Weapons
         private BoxCollider2D _boxCollider2D;
         private Player _player;
         
-        [NonSerialized]
-        public float KnockBack;
-        [NonSerialized]
-        public float Damage;
-        [NonSerialized]
-        public float Radius;      
+        public ItemData itemData;
+        
+        [FormerlySerializedAs("KnockBack")] public float knockBack;
+        public float damage;
+        public float radius;      
         [NonSerialized]
         public Animator Animator;
         private void Awake()
@@ -25,6 +26,14 @@ namespace RicePaste.Scripts.Weapons
             _boxCollider2D = GetComponent<BoxCollider2D>();
             Animator = GetComponent<Animator>();
             _player = GameManager.instance.player;
+        }
+
+        protected virtual void Start()
+        {
+            damage = itemData.baseDamage;
+            knockBack = itemData.baseKnockback;
+            radius = itemData.baseRange;
+            SetRadius(radius);
         }
 
         private void Update()
@@ -52,11 +61,19 @@ namespace RicePaste.Scripts.Weapons
             _boxCollider2D.enabled = false;
         }
 
-        protected void SetRadius(float radius)
+        public void SetRadius(float Radius)
         {
-            Radius = radius;
-            GameManager.instance.player.GetComponentInChildren<PlayerAttackRange>().Radius = this.Radius;
+            radius = Radius;
+            GameManager.instance.player.GetComponentInChildren<PlayerAttackRange>().Radius = radius;
             GameManager.instance.player.GetComponentInChildren<PlayerAttackRange>().SetAttackRangeSprite();
+        }
+
+        public void SetMeleeWeaponStatus(float KnockBack, float Damage, float Radius)
+        {
+            knockBack = KnockBack;
+            damage = Damage;
+            radius = Radius;
+            SetRadius(radius);
         }
         // public virtual void Attack()
         // {

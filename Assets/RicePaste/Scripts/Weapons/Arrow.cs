@@ -1,11 +1,14 @@
 using System;
 using RicePaste.Scripts.Manager;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace RicePaste.Scripts.Weapons
 {
     public class Arrow : MonoBehaviour
     {
+        public int currentCount;
+        public int maxCount;
         private Rigidbody2D _rigidbody;
         [NonSerialized]
         public float Damage;
@@ -17,11 +20,12 @@ namespace RicePaste.Scripts.Weapons
         {
             _rigidbody = GetComponent<Rigidbody2D>();
         }
-        public void Init(float damage, float knockback, float speed)
+        public void Init(float damage, float knockback, float speed, int count)
         {
             _speed = speed;
             Damage = damage;
             Knockback = knockback;
+            maxCount = count;
         }
         private void Start()
         {
@@ -33,13 +37,22 @@ namespace RicePaste.Scripts.Weapons
         }
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if(other.CompareTag("Enemy"))
+            if (other.CompareTag("Enemy"))
+                ++currentCount;
+
+            if (currentCount >= maxCount)
+            {
                 gameObject.SetActive(false);
+                currentCount = 0;
+            }
         }
         private void OnTriggerExit2D(Collider2D other)
         {
             if (other.CompareTag("Wall"))
+            {
                 gameObject.SetActive(false);
+                currentCount = 0;
+            }
         }
         private void ResetArrowSpeed()
         {

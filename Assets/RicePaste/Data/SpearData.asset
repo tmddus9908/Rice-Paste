@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b0ba4cf28186a6409cd97d56eff3792, type: 3}
+  m_Name: SpearData
+  m_EditorClassIdentifier: 
+  itemType: 0
+  itemName: Spear
+  itemDesc: 
+  itemIcon: {fileID: 1820488062, guid: 00200a7563bfc5b40951fd069fa9a2ef, type: 3}
+  baseDamage: 10
+  baseCount: 0
+  baseKnockback: 0.7
+  baseRange: 5
+  damages:
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  counts: 
+  knockbacks:
+  - 0.15
+  - 0.15
+  - 0.25
+  - 0.3
+  - 0.35
+  ranges:
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  projectile: {fileID: 4731021399649986522, guid: 9a53ab6388df3e04d9e62c7a2d972e1a, type: 3}

@@ -1,9 +1,9 @@
 using System;
 using RicePaste.Scripts.Manager;
 using RicePaste.Scripts.Weapons;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
 
 namespace RicePaste.Scripts.Players
@@ -109,10 +109,18 @@ namespace RicePaste.Scripts.Players
             
             equippedWeapon = weapons[_weaponCount];
             
-            equippedWeapon.gameObject.SetActive(true);
-            
+           Test();
+
             if (_weaponCount == 2)
                 _weaponCount = -1;
+        }
+
+        private async void Test()
+        {
+            equippedWeapon.gameObject.SetActive(true);
+
+            await Task.Delay(1);
+            equippedWeapon.SetRadius(equippedWeapon.radius);
         }
     }
 }

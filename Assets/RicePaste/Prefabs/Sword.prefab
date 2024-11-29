@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9114243898688024394}
   - component: {fileID: 5129610236229815666}
   - component: {fileID: 1345327275409986417}
-  - component: {fileID: 730005601388688132}
+  - component: {fileID: -5792107195386842601}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Weapon
@@ -153,7 +153,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.601078, y: 1.2400048}
   m_EdgeRadius: 0
---- !u!114 &730005601388688132
+--- !u!114 &-5792107195386842601
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,9 +162,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5888474618576321059}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef844ac2dfd6f804484d5f5900d2392f, type: 3}
+  m_Script: {fileID: 11500000, guid: 6949095b8522b4042a95d6729ec1628d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
-  knockback: 0.3
-  radius: 3
+  itemData: {fileID: 11400000, guid: f9909849da321e146b4122457ac238dd, type: 2}
+  KnockBack: 0
+  Damage: 0
+  Radius: 0

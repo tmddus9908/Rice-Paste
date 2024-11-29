@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b0ba4cf28186a6409cd97d56eff3792, type: 3}
+  m_Name: ShieldData
+  m_EditorClassIdentifier: 
+  itemType: 3
+  itemName: Shield
+  itemDesc: 
+  itemIcon: {fileID: -449413464, guid: 00200a7563bfc5b40951fd069fa9a2ef, type: 3}
+  baseDamage: 6
+  baseCount: 1
+  baseKnockback: 0.2
+  baseRange: 0
+  damages:
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  counts: 0100000001000000010000000100000001000000
+  knockbacks:
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05
+  ranges: []
+  projectile: {fileID: 7020506669411740800, guid: 3b24251e75c7fb346a16b65e4d5fb12f, type: 3}
