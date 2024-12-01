@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using RicePaste.Scripts.Players;
 using UnityEngine;
 
 namespace RicePaste.Scripts.Animation

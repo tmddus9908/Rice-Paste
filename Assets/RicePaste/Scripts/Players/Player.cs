@@ -4,18 +4,16 @@ using RicePaste.Scripts.Weapons;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 
 namespace RicePaste.Scripts.Players
 {
     public class Player : MonoBehaviour
     {
-        [NonSerialized]
-        public Vector2 InputVec;
-        [NonSerialized]
-        public Vector2 CameraMouse;
-        [NonSerialized]
-        public float Angle;
+        public Vector2 inputVec;
+        public Vector2 cameraMouse;
+        public float angle;
         
         public float attackCooldown;
         public float moveSpeed;
@@ -39,22 +37,22 @@ namespace RicePaste.Scripts.Players
         }
         private void FixedUpdate()
         {
-            Vector2 nextVec = InputVec * moveSpeed * Time.fixedDeltaTime;
+            Vector2 nextVec = inputVec * moveSpeed * Time.fixedDeltaTime;
             _rigidbody.MovePosition(_rigidbody.position + nextVec);
         }
 
         private void LateUpdate()
         {
-            _animator.SetFloat("Speed", InputVec.magnitude);
+            _animator.SetFloat("Speed", inputVec.magnitude);
         
-            if (InputVec.x != 0)
-                _spriteRenderer.flipX = InputVec.x > 0;
+            if (inputVec.x != 0)
+                _spriteRenderer.flipX = inputVec.x > 0;
         }
 
         private void Update()
         {
             Vector2 mousePosition = Mouse.current.position.ReadValue();
-            CameraMouse= Camera.main.ScreenToWorldPoint(new Vector2(mousePosition.x, mousePosition.y));
+            cameraMouse= Camera.main.ScreenToWorldPoint(new Vector2(mousePosition.x, mousePosition.y));
             
             if (Mouse.current.leftButton.isPressed && Time.time >= _lastAttackTime + attackCooldown)
             {
@@ -86,7 +84,7 @@ namespace RicePaste.Scripts.Players
 
         public void OnMove(InputValue value)
         {
-            InputVec = value.Get<Vector2>();
+            inputVec = value.Get<Vector2>();
         }
 
         public void OnSwap()
@@ -95,10 +93,10 @@ namespace RicePaste.Scripts.Players
         }
         private void Attack()
         {
-            Angle = Mathf.Atan2(CameraMouse.y - transform.position.y, CameraMouse.x - transform.position.x) * Mathf.Rad2Deg;
-            equippedWeapon.transform.rotation = Quaternion.AngleAxis(Angle - 180, Vector3.forward);
+            angle = Mathf.Atan2(cameraMouse.y - transform.position.y, cameraMouse.x - transform.position.x) * Mathf.Rad2Deg;
+            equippedWeapon.transform.rotation = Quaternion.AngleAxis(angle - 180, Vector3.forward);
             
-            equippedWeapon.GetComponent<SpriteRenderer>().flipY = CameraMouse.x > 0 ? true : false;
+            equippedWeapon.GetComponent<SpriteRenderer>().flipY = cameraMouse.x > 0 ? true : false;
         }
 
         private void SwapWeapon()
@@ -121,6 +119,8 @@ namespace RicePaste.Scripts.Players
 
             await Task.Delay(1);
             equippedWeapon.SetRadius(equippedWeapon.radius);
+            equippedWeapon.SetScale(equippedWeapon.scale);
+            equippedWeapon.SetCooldown(equippedWeapon.cooldown);
         }
     }
 }

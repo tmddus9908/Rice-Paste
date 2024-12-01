@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using RicePaste.Scripts.Players;
 namespace RicePaste.Scripts.Manager

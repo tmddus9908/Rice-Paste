@@ -22,7 +22,7 @@ namespace RicePaste.Scripts.Enemy
             float diffX = Mathf.Abs(playerPos.x - myPos.x);
             float diffY = Mathf.Abs(playerPos.y - myPos.y);
         
-            Vector3 playerDir = GameManager.instance.player.InputVec;
+            Vector3 playerDir = GameManager.instance.player.inputVec;
             float dirX = playerDir.x < 0 ? -1 : 1;
             float dirY = playerDir.y < 0 ? -1 : 1;
         
@@ -55,8 +55,11 @@ namespace RicePaste.Scripts.Enemy
         private int CompareValues(float x, float y)
         {
             float diff = x - y;
+            
             float tolerance = 0.0001f;
-            int result = 0;
+            
+            int result;
+            
             if (diff < tolerance)
                 result = 0;
             else

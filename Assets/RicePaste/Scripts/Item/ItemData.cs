@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
 
 namespace RicePaste.Scripts.Item
@@ -20,14 +19,15 @@ namespace RicePaste.Scripts.Item
         public int baseCount;
         public float baseKnockback;
         public float baseRange;
+        public Vector3 baseScale;
+        public float baseCooldown;
         public float[] damages;
         public int[] counts;
         public float[] knockbacks;
         public float[] ranges;
+        public float[] scales;
+        public float[] cooldowns;
         public float[] playerSpeeds;
-        
-        [Header("# Weapon")]
-        public GameObject projectile;
     }
     
 }

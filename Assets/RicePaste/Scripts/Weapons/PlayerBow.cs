@@ -27,18 +27,22 @@ namespace RicePaste.Scripts.Weapons
             
             arrow.position = arrowSpawner.position;
             arrow.GetComponent<Arrow>().Init(damage, knockBack, arrowSpeed, arrowCount);
-            arrow.transform.rotation = Quaternion.AngleAxis(GameManager.instance.player.Angle - 180, Vector3.forward);
-            arrow.GetComponent<SpriteRenderer>().flipY = GameManager.instance.player.CameraMouse.x > 0 ? true : false;
+            arrow.transform.rotation = Quaternion.AngleAxis(GameManager.instance.player.angle - 180, Vector3.forward);
+            arrow.GetComponent<SpriteRenderer>().flipY = GameManager.instance.player.cameraMouse.x > 0 ? true : false;
         }
 
-        public void SetRangeWeaponStatus(float KnockBack, float Damage, float Radius, int Speed, int Count)
+        public void SetRangeWeaponStatus(float KnockBack, float Damage, float Radius,  int Speed, int Count, Vector3 Scale, float CoolDown)
         {
             knockBack = KnockBack;
             damage = Damage;
             radius = Radius;
+            scale = Scale;
             arrowSpeed += Speed;
             arrowCount = Count;
+            GameManager.instance.player.attackCooldown = CoolDown;
             SetRadius(radius);
+            SetScale(scale);
+            SetCooldown(CoolDown);
         }
     }
 }

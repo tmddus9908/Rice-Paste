@@ -16,15 +16,15 @@ namespace RicePaste.Scripts.Weapons
         
         public ItemData itemData;
         
-        [FormerlySerializedAs("KnockBack")] public float knockBack;
+        public float knockBack;
         public float damage;
-        public float radius;      
-        [NonSerialized]
-        public Animator Animator;
+        public float radius;
+        public Vector3 scale;
+        public float cooldown;
+        
         private void Awake()
         {
             _boxCollider2D = GetComponent<BoxCollider2D>();
-            Animator = GetComponent<Animator>();
             _player = GameManager.instance.player;
         }
 
@@ -33,22 +33,21 @@ namespace RicePaste.Scripts.Weapons
             damage = itemData.baseDamage;
             knockBack = itemData.baseKnockback;
             radius = itemData.baseRange;
+            scale = itemData.baseScale;
+            cooldown = itemData.baseCooldown;
             SetRadius(radius);
+            SetScale(scale);
+            SetCooldown(cooldown);
         }
 
         private void Update()
         {
-            transform.position = _player.CameraMouse;
-            
-            // _player.Angle = Mathf.Atan2(_player.CameraMouse.y - transform.position.y, _player.CameraMouse.x - transform.position.x) * Mathf.Rad2Deg;
-            // _player.equippedWeapon.transform.rotation = Quaternion.AngleAxis(_player.Angle - 180, Vector3.forward);
-            //
-            // _player.equippedWeapon.GetComponent<SpriteRenderer>().flipY = _player.CameraMouse.x > 0 ? true : false;
+            transform.position = _player.cameraMouse;
         }
 
         protected virtual void OnEnable()
         {
-            transform.position = GameManager.instance.player.CameraMouse;
+            transform.position = GameManager.instance.player.cameraMouse;
         }
 
         private void OnCollider()
@@ -68,19 +67,31 @@ namespace RicePaste.Scripts.Weapons
             GameManager.instance.player.GetComponentInChildren<PlayerAttackRange>().SetAttackRangeSprite();
         }
 
-        public void SetMeleeWeaponStatus(float KnockBack, float Damage, float Radius)
+        public void SetScale(Vector3 Scale)
+        {
+            scale = Scale;
+            gameObject.transform.localScale = Scale;
+        }
+
+        public void SetCooldown(float CoolDown)
+        {
+            cooldown = CoolDown;
+            GameManager.instance.player.attackCooldown = cooldown;
+        }
+        public void SetMeleeWeaponStatus(float KnockBack, float Damage, float Radius, Vector3 Scale, float CoolDown)
         {
             knockBack = KnockBack;
             damage = Damage;
             radius = Radius;
+            scale = Scale;
             SetRadius(radius);
+            SetScale(scale);
+            SetCooldown(CoolDown);
         }
         // public virtual void Attack()
         // {
         //     Debug.Log("Weapon의 Attack 입니다.");
         // }
-
-        
     }
 }
 

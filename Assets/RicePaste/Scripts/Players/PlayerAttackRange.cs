@@ -14,7 +14,7 @@ namespace RicePaste.Scripts.Players
         {
             center = GameManager.instance.player.transform.position;
 
-            float distance = Vector2.Distance(center, GameManager.instance.player.CameraMouse);
+            float distance = Vector2.Distance(center, GameManager.instance.player.cameraMouse);
 
             if (distance > Radius)
                 GameManager.instance.player.equippedWeapon.gameObject.SetActive(false);

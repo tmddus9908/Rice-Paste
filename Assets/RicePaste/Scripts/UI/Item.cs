@@ -38,7 +38,8 @@ namespace RicePaste.Scripts.UI
                     if (GameManager.instance.player.equippedWeapon != obj1)
                         return;
                     obj1.SetMeleeWeaponStatus((obj1.knockBack+ data.knockbacks[level]), 
-                        (obj1.damage+ data.damages[level]), (obj1.radius + data.ranges[level]));
+                        (obj1.damage+ data.damages[level]), (obj1.radius + data.ranges[level]),
+                        (data.baseScale * data.scales[level]), (data.baseCooldown - data.cooldowns[level]));
                     break;
                 case ItemData.ItemType.Range:
                     var bow = weapon.GetComponent<PlayerBow>();
@@ -46,7 +47,8 @@ namespace RicePaste.Scripts.UI
                     if (GameManager.instance.player.equippedWeapon != obj2)
                         return;
                     bow.SetRangeWeaponStatus((bow.knockBack + data.knockbacks[level]), 
-                        (bow.damage + data.damages[level]), (bow.radius + data.ranges[level]), 1, (bow.arrowCount + data.counts[level]));
+                        (bow.damage + data.damages[level]), (bow.radius + data.ranges[level]), 1, (bow.arrowCount + data.counts[level])
+                        , data.baseScale * data.scales[level], (data.baseCooldown - data.cooldowns[level]));
                     break;
                 case ItemData.ItemType.Rotation:
                     var obj3 = weapon.GetComponent<RotationWeapon>();

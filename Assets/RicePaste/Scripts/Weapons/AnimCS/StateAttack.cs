@@ -1,4 +1,3 @@
-using RicePaste.Scripts.Manager;
 using UnityEngine;
 
 namespace RicePaste.Scripts.Weapons.AnimCS

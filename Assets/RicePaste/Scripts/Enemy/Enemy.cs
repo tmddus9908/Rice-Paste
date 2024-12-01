@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using RicePaste.Scripts.Manager;
 using RicePaste.Scripts.Weapons;
@@ -16,7 +15,7 @@ namespace RicePaste.Scripts.Enemy
         public Rigidbody2D target;
 
         public bool isLive;
-        public bool isHit = false;
+        public bool isHit;
         
         private Rigidbody2D _rigidbody;
         private Animator _animator;
