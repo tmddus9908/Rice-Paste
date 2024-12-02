@@ -46,5 +46,6 @@ namespace RicePaste.Scripts.Enemy
         public int health;
         public float speed;
         public int damage;
+        public float knockback;
     }
 }

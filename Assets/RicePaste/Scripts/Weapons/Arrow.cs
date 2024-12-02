@@ -49,14 +49,14 @@ namespace RicePaste.Scripts.Weapons
                 currentCount = 0;
             }
         }
-        private void OnTriggerExit2D(Collider2D other)
-        {
-            if (other.CompareTag("Wall"))
-            {
-                gameObject.SetActive(false);
-                currentCount = 0;
-            }
-        }
+        // private void OnTriggerExit2D(Collider2D other)
+        // {
+        //     if (other.CompareTag("Wall"))
+        //     {
+        //         gameObject.SetActive(false);
+        //         currentCount = 0;
+        //     }
+        // }
         private void ResetArrowSpeed()
         {
             Vector2 mousePos = (Vector2)GameManager.instance.player.cameraMouse;

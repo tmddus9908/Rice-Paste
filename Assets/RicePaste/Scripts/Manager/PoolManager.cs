@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using RicePaste.Scripts.Enemy;
 using UnityEngine;
 
 namespace RicePaste.Scripts.Manager
@@ -9,7 +11,6 @@ namespace RicePaste.Scripts.Manager
         public GameObject[] prefabs;
         // .. 풀 담당을 하는 리스트들
         private List<GameObject>[] _pools;
-
         private void Awake()
         {
             _pools = new List<GameObject>[prefabs.Length];

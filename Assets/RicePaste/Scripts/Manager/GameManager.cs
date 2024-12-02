@@ -1,11 +1,14 @@
 using UnityEngine;
 using RicePaste.Scripts.Players;
+using RicePaste.Scripts.UI;
+
 namespace RicePaste.Scripts.Manager
 {
     public class GameManager : MonoBehaviour
     {
         public static GameManager instance;
-
+        
+        public UIManager uiManager;
         [Header("# Game Control")]
         public float gameTime;
         public float maxGameTime = 2 * 10f;
@@ -21,8 +24,8 @@ namespace RicePaste.Scripts.Manager
         public int kill;
         public int exp;
         public int[] nextExp = { 3, 5, 10, 100, 150, 210, 280, 360, 450, 600};
-        
-        
+
+        public int count;
         private void Awake()
         {
             instance = this;
@@ -52,6 +55,7 @@ namespace RicePaste.Scripts.Manager
             {
                 level++;
                 exp = 0;
+                ++player.statusPoint;
             }
         }
     }

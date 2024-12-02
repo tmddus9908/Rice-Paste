@@ -10,6 +10,7 @@ namespace RicePaste.Scripts.Enemy
         public float health;
         public float maxHealth;
         public int attackDamage;
+        public float knockback;
         
         public RuntimeAnimatorController[] animatorControllers;
         public Rigidbody2D target;
@@ -20,7 +21,7 @@ namespace RicePaste.Scripts.Enemy
         private Rigidbody2D _rigidbody;
         private Animator _animator;
         private SpriteRenderer _spriteRenderer;
-
+        private float count;
         private void OnEnable()
         {
             target = GameManager.instance.player.GetComponent<Rigidbody2D>();
@@ -62,6 +63,7 @@ namespace RicePaste.Scripts.Enemy
             maxHealth = data.health;
             health = data.health;
             attackDamage = data.damage;
+            knockback = data.knockback;
         }
 
         private void OnTriggerEnter2D(Collider2D other)

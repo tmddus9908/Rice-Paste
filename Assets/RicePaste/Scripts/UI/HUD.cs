@@ -11,6 +11,7 @@ namespace RicePaste.Scripts.UI
         {
             Exp,
             Level,
+            Status,
             Kill,
             Time,
             Health
@@ -38,6 +39,9 @@ namespace RicePaste.Scripts.UI
                     break;
                 case InfoType.Level:
                     _myText.text = string.Format("Lv.{0:F0}", GameManager.instance.level);
+                    break;
+                case InfoType.Status:
+                    _myText.text = string.Format("{0:F0}pt", GameManager.instance.player.statusPoint);
                     break;
                 case InfoType.Kill:
                     _myText.text = string.Format("X {0:F0}", GameManager.instance.kill);
