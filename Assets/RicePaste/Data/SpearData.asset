@@ -16,12 +16,12 @@ MonoBehaviour:
   itemName: Spear
   itemDesc: 
   itemIcon: {fileID: 1820488062, guid: 00200a7563bfc5b40951fd069fa9a2ef, type: 3}
-  baseDamage: 10
+  baseDamage: 15
   baseCount: 0
   baseKnockback: 0.7
   baseRange: 5
   baseScale: {x: 1, y: 1, z: 1}
-  baseCooldown: 3
+  baseCooldown: 2
   damages:
   - 4
   - 5
@@ -52,5 +52,5 @@ MonoBehaviour:
   - 1
   - 1.5
   - 2
-  - 3
+  - 2
   playerSpeeds: []

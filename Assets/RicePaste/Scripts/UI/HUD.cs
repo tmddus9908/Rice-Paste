@@ -47,7 +47,7 @@ namespace RicePaste.Scripts.UI
                     _myText.text = string.Format("X {0:F0}", GameManager.instance.kill);
                     break;
                 case InfoType.Time:
-                    float remainTime = GameManager.instance.maxGameTime - GameManager.instance.gameTime;
+                    float remainTime = GameManager.instance.gameTime;
                     int minutes = Mathf.FloorToInt(remainTime / 60);
                     int seconds = Mathf.FloorToInt(remainTime % 60);
                     _myText.text = string.Format("{0:D2}:{1:D2}", minutes, seconds);

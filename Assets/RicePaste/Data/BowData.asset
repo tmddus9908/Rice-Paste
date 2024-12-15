@@ -16,12 +16,12 @@ MonoBehaviour:
   itemName: Bow
   itemDesc: 
   itemIcon: {fileID: 1846844586, guid: 00200a7563bfc5b40951fd069fa9a2ef, type: 3}
-  baseDamage: 11
+  baseDamage: 20
   baseCount: 1
   baseKnockback: 0.1
   baseRange: 2.5
   baseScale: {x: 1, y: 1, z: 1}
-  baseCooldown: 3
+  baseCooldown: 2
   damages:
   - 5
   - 6
@@ -52,5 +52,5 @@ MonoBehaviour:
   - 1
   - 1.5
   - 2
-  - 3
+  - 2
   playerSpeeds: []

@@ -15,7 +15,8 @@ namespace RicePaste.Scripts.Weapons
         private Player _player;
         
         public ItemData itemData;
-        
+
+        // public int level;
         public float knockBack;
         public float damage;
         public float radius;

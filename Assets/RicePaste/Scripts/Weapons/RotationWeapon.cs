@@ -7,6 +7,7 @@ namespace RicePaste.Scripts.Weapons
     public class RotationWeapon : MonoBehaviour
     {
         public ItemData itemData;
+        // public int level;
         public int id;
         public int prefabId;
         public float damage;

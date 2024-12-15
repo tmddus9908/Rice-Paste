@@ -41,9 +41,14 @@ namespace RicePaste.Scripts.Manager
         {
             gameTime += Time.deltaTime;
 
-            if (gameTime > maxGameTime)
+            // if (gameTime > maxGameTime)
+            // {
+            //     gameTime = maxGameTime;
+            // }
+            if (Input.GetKeyDown("space"))
             {
-                gameTime = maxGameTime;
+                ++level;
+                ++player.statusPoint;
             }
         }
 
@@ -56,6 +61,7 @@ namespace RicePaste.Scripts.Manager
                 level++;
                 exp = 0;
                 ++player.statusPoint;
+                // Time.timeScale = 0;
             }
         }
     }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 namespace RicePaste.Scripts.UI
 {
@@ -5,6 +6,14 @@ namespace RicePaste.Scripts.UI
     {
         public Canvas canvas;
 
-        public GameObject retry;
+        public ESCUI escui;
+        public PassUI passUI;
+        private void Update()
+        {
+            if (Input.GetKeyDown("escape"))
+            {
+                escui.EscUI();
+            }
+        }
     }
 }

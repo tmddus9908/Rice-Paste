@@ -93,7 +93,7 @@ namespace RicePaste.Scripts.Players
             else if (GameManager.instance.health <= 0)
             {
                 _animator.SetTrigger("Dead");
-                GameManager.instance.uiManager.retry.gameObject.SetActive(true);
+                Test2();
             }
         }
         public void OnMove(InputValue value)
@@ -146,6 +146,13 @@ namespace RicePaste.Scripts.Players
             equippedWeapon.SetRadius(equippedWeapon.radius);
             equippedWeapon.SetScale(equippedWeapon.scale);
             equippedWeapon.SetCooldown(equippedWeapon.cooldown);
+        }
+
+        private async void Test2()
+        {
+            await Task.Delay(1);
+            equippedWeapon.SetScale(Vector3.zero);
+            GameManager.instance.uiManager.escui.EscUI();
         }
     }
 }
